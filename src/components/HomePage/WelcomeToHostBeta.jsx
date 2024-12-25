@@ -202,12 +202,16 @@ const Wrapper = styled.div`
         text-align: center;
         justify-content: center;
         align-items: center;
+       
       }
       p{
         display: flex;
         justify-content: center;
         align-items: center;
         padding-inline: 10px;
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 20px;
         }
       .btn{
         display: flex;
@@ -220,6 +224,13 @@ const Wrapper = styled.div`
         h2{
           display: flex;
           justify-content: center;
+          margin: 0;
+        }
+        p{
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
       .positive{
@@ -269,6 +280,7 @@ const Wrapper = styled.div`
     .imageNiggaWithMac{
       display: none;
     }
+   
   }
 `
 

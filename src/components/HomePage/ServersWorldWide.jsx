@@ -67,13 +67,8 @@ const ServersWorldWide = () => {
        height: 237px;
      }
    }
-   @media(max-width: 497px ){
-     svg{
-       width:575px;
-       height: 200px;
-     }
-   }
-   @media(max-width: 424px ){
+   
+   @media(max-width: 500px ){
      svg{
        display: none;
      }

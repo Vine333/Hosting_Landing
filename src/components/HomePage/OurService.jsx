@@ -134,22 +134,64 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
     }
+
     .card{
-      height: 100px;
-      width: 75%;     
+      
+         
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      p{
+          margin: 0;
+      }
+      h3{
+       margin: 0;
+        
+      }
+      
+    }
+    .content{
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+  @media(max-width: 623px){
+    .card{
       flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 15px;
       p{
-        width: 30%;
+        margin: 0;
       }
       h3{
-        width: 40%;
+        margin: 0;
+
       }
-      
+
     }
+
     .content{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .line1{
+      width: 100%;
+      order: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .line2{
+      width: 100%;
+      order: 2;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }

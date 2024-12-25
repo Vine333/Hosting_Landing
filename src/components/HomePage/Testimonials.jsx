@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import Button from "../common/Button.jsx";
 import ICStars from "../../icons/ICStars";
+import videoSrc from '/src/assets/img/coverr-a-productive-morning-4822-4_3-1080p.mp4';
+
 
 const Testimonials = () => {
     return (<Wrapper>
@@ -20,8 +22,8 @@ const Testimonials = () => {
             </div>
             <div className='cards'>
                 <div className='frame'>
-                    <video controls loop autoPlay>
-                        <source src='src/assets/img/coverr-a-productive-morning-4822-4_3-1080p.mp4' type='video/mp4'/>
+                    <video loop autoPlay muted>
+                        <source src={videoSrc} type='video/mp4' />
                     </video>
                 </div>
                 <div className='card'>
@@ -154,6 +156,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
+    gap: 20px;
 
   }
 

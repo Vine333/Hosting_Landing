@@ -10,8 +10,9 @@ const Button = ({children, ...props}) => {
 };
 
 const Btn = styled.button`
-  
-    width: 100px;
+  font-size: 20px;
+  font-weight: 500;
+    width: 150px;
     height: 50px;
   background-color: transparent;
   border: 1px solid #FF885B;
@@ -21,6 +22,7 @@ const Btn = styled.button`
     border: 1px solid #FF885B ;
     color:whitesmoke;
     scale: 105%;
+    transition: 0.2s;
   }
   
 `

@@ -176,6 +176,12 @@ const Wrapper = styled.div`
       order: 2;
       width: 100%;
     }
+    .column1{
+      text-align: start;
+    }
+    .column2{
+      text-align: start;
+    }
   }
   @media(max-width: 471px){
    .card{

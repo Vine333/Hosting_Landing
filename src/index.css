@@ -1,0 +1,22 @@
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #1A1A19;
+}
+
+#root {
+    width: 100%;
+}
+:root {
+    font-family:Raleway, serif;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: #ffffff;
+    font-optical-sizing: auto;
+}

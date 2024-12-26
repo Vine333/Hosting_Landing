@@ -55,6 +55,7 @@ width : 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 30px;
   }
   .logo{
     display: flex;
@@ -62,7 +63,7 @@ width : 100%;
     align-items: flex-start;
     justify-content: center;
     flex: 1 1 40%;
-    gap: 15px;
+    gap: 25px;
     h1{
       color: white;
       font-size: 40px;
@@ -82,13 +83,17 @@ width : 100%;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap:15px;  
+    gap:20px;  
+    align-self: center;
     h1{
       color: white;
       font-size: 30px;
     }
     a{
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
       color: lightgrey;
       &:hover{
         color: #FF885B;

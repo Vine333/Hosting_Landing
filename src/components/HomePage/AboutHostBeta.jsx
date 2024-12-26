@@ -169,6 +169,7 @@ const Wrapper = styled.div`
   }
   @media(max-width: 1171px){
     .perfectDigital{
+      padding: 50px;
       justify-content: center;
       align-items: center;
       align-self: center;
@@ -177,8 +178,12 @@ const Wrapper = styled.div`
       h1{
         text-align: center;
       }
+      p{
+        text-align: center;
+      }
     }
     .container{
+    
       flex-direction: column;
     }
     .imgJump{

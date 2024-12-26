@@ -54,7 +54,11 @@ const GetStarted = () => {
    justify-content: center;
    align-items: center;
    padding: 50px;
-   
+   .btnContainer{
+     gap: 15px;
+     display: flex;
+   }
+  
  }
    .ellipse{
       bottom: 0;
@@ -106,15 +110,13 @@ const GetStarted = () => {
    .btnContainer{
      margin-top: 20px;
      .btnStart{
-       margin-right: 15px;
-       margin-top: 20px;
+      
        background-color: #FF885B;
        border: none;
        width: 150px;
        height: 70px;
      }
      .btnHost{
-       margin-top: 20px;
        width: 150px;
        height: 70px; 
      }

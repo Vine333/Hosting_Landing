@@ -44,9 +44,7 @@ const BurgerBtn = () => {
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <Button className='btnInBurger'>
-                    Contact Us
-                </Button>
+
             </nav>
         </Wrapper>
     );

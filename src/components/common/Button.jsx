@@ -10,7 +10,7 @@ const Button = ({children, ...props}) => {
 };
 
 const Btn = styled.button`
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
     width: 150px;
     height: 50px;

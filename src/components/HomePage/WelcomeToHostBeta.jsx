@@ -140,7 +140,9 @@ const Wrapper = styled.div`
   }
 
   .positive {
+
     h2 {
+      margin-top: 15px;
       font-size: 40px;
       font-weight: 350;
     }
@@ -156,6 +158,7 @@ const Wrapper = styled.div`
 
   .active {
     h2 {
+      margin-top: 15px;
       font-size: 40px;
       font-weight: 350;
     }
@@ -210,15 +213,18 @@ const Wrapper = styled.div`
         align-items: center;
         padding-inline: 10px;
         width: 50%;
+        text-align: center;
         margin: 0 auto;
         padding-bottom: 20px;
         }
       .btn{
+     
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .review{
+        margin-top: 15px;
         justify-content: center;
         align-items: center;
         h2{
@@ -234,6 +240,7 @@ const Wrapper = styled.div`
         }
       }
       .positive{
+        margin-top: 15px;
         p{
           padding: 0;
           display: flex;

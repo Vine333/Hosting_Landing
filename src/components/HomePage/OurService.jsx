@@ -198,9 +198,14 @@ const Wrapper = styled.div`
   }
   @media(max-width: 722px){
     .card{
-      gap: 50px;
+      gap: 30px;
+      flex-direction: column;
+      
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       p{
-        display: none;
+        font-size: 10px;
       }
       h3{
         width: 50%;

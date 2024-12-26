@@ -136,6 +136,8 @@ width : 100%;
   }
   @media(max-width: 1065px){
     .container{
+      padding: 30px;
+      text-align: center;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -146,7 +148,7 @@ width : 100%;
       align-items: center;
     }
     .getInTouch{
-     
+    align-items: center;
     }
     .quick{
       align-items: center;

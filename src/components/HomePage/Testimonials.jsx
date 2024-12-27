@@ -23,7 +23,7 @@ const Testimonials = () => {
             <div className='cards'>
                 <div className='frame'>
                     <video loop autoPlay muted>
-                        <source src={videoSrc} type='video/mp4' />
+                        <source src={videoSrc} type='video/mp4'/>
                     </video>
                 </div>
                 <div className='card'>
@@ -33,9 +33,10 @@ const Testimonials = () => {
                         <ICStars/>
                         <ICStars/>
                         <ICStars/>
+                        <div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi illo laudantium obcaecati odit quidem sint tenetur? Commodi, necessitatibus quidem.</span>
+                        </div>
                     </div>
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi illo laudantium obcaecati odit quidem sint tenetur? Commodi, necessitatibus quidem.</span>
                     <div className='avatar'>
                         <img src="src/assets/img/Ellipse 13.png" alt=""/>
                         <div className='name'>
@@ -51,8 +52,11 @@ const Testimonials = () => {
                         <ICStars/>
                         <ICStars/>
                         <ICStars/>
+                        <div>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi illo laudantium obcaecati odit quidem sint tenetur? Commodi, necessitatibus quidem.</span>
+
+                        </div>
                     </div>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi illo laudantium obcaecati odit quidem sint tenetur? Commodi, necessitatibus quidem.</span>
                     <div className='avatar'>
                         <img src="/src/assets/img/Ellipse 14.png" alt=""/>
                         <div className='name'>
@@ -81,6 +85,9 @@ const Wrapper = styled.div`
 
   .testimon {
     color: #FF885B;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
   }
 
@@ -105,9 +112,11 @@ const Wrapper = styled.div`
   .title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+
 
     h2 {
+      margin: 0;
       font-size: 50px;
       color: white;
     }
@@ -120,19 +129,20 @@ const Wrapper = styled.div`
     width: 150px;
     height: 70px;
   }
-  .button{
+
+  .button {
     display: none;
   }
 
   .card {
     max-width: 33%;
-    width: 400px;
+    width: 375px;
     height: 400px;
     background-color: #3b3a3a;
-    padding: 20px;
+    padding: 40px;
     display: flex;
     gap: 45px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
 
@@ -145,11 +155,11 @@ const Wrapper = styled.div`
     display: flex;
   }
 
-  .stars {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  //.stars {
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: flex-start;
+  //}
 
   .cards {
     display: flex;
@@ -158,14 +168,26 @@ const Wrapper = styled.div`
     margin-top: 20px;
     gap: 20px;
 
+
+  }
+
+  .sts {
+    gap: 15px;
+
+    div {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .frame {
-    width: 475px;
+    width: 530px;
     height: 400px;
+    overflow: hidden;
 
     video {
-      width: 475px;
+
       height: 400px;
     }
 
@@ -183,7 +205,8 @@ const Wrapper = styled.div`
     .btn {
       display: none;
     }
-    .button{
+
+    .button {
       margin-top: 20px;
       background-color: #FF885B;
       border: none;
@@ -201,8 +224,9 @@ const Wrapper = styled.div`
 
   .testimon {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
   }
 
   .card {

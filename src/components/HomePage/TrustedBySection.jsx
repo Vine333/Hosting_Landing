@@ -52,6 +52,13 @@ const TrustedBySection = () => {
        flex-direction: column;
      }
    }
+   .container{
+     h1{
+       text-align: center;
+       font-weight: 700;
+       font-size: 45px;
+     }
+   }
  `
 
 

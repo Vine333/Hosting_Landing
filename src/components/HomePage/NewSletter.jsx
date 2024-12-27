@@ -92,7 +92,7 @@ width: 100%;
      
   }
   @media(max-width: 1440px){
-    width: 75%;
+    width: 95%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;

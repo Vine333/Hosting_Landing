@@ -67,6 +67,7 @@ const GetStarted = () => {
    }
    .getstart{
      color: #FF885B;
+     margin-bottom: 10px;
    }
    .descriptions{
      width: 100%;
@@ -74,7 +75,7 @@ const GetStarted = () => {
      justify-content: center;
      align-items: flex-start;
      flex-direction: column;
-     padding: 10px;
+    
      gap: 30px;
      h2{
        font-size: 40px;
@@ -95,6 +96,12 @@ const GetStarted = () => {
    }
    
    .card{
+     div{
+       gap: 10px;
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+     }
      padding: 20px;
      width: 100%;
      height: 500px;

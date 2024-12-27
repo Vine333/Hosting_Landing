@@ -200,6 +200,13 @@ const Wrapper = styled.div`
       align-items: center;
       gap: 30px;
     }
+    .frame{
+      video{
+        margin-left: 28px;
+        width: 90%;
+      }
+    }
+
   }
   @media (max-width: 751px) {
     .btn {
@@ -234,7 +241,7 @@ const Wrapper = styled.div`
     max-width: 100%;
   }
 
-  @media (max-width: 495px) {
+  @media (max-width: 576px) {
     .frame {
       display: none;
     }

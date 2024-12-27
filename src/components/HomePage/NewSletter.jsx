@@ -114,9 +114,10 @@ width: 100%;
     .input{
       input{
         width: 100%;
+        margin: 0;
       }
       .btn{
-        margin-right: 10px;
+        
       }
     }
   }

@@ -1,84 +1,83 @@
 import React from 'react';
 import styled from "styled-components";
 import Button from "../../components/common/Button.jsx";
-import {Nigga} from "../../assets/svg/index.js";
-import {ICSupport,ICPowerFull,ICDefends} from '/src/icons/index.js'
-
+import {ICSupport, ICPowerFull, ICDefends,} from '/src/icons/index.js'
+import {MainImg} from '/src/assets/svg/Index.js'
 
 
 const WelcomeToHostBeta = () => {
-    return (
-        <Wrapper>
-            <div className='containerSmartCompany'>
-                <div className='descriptionSmart'>
-                    <div className='welcome'>
+    return (<Wrapper>
+        <div className='containerSmartCompany'>
+            <div className='descriptionSmart'>
+                <div className='welcome'>
 
-                            WELCOME TO HOST BETA
+                    WELCOME TO HOST BETA
+                </div>
+                <div className='smartCompanyTitle'>
+                    <h1 className='titleSmart'>
+                        Smart Company<br/>
+                        With Perfect<br/>
+                        Web Space
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum magni obcaecati temporibus.
+                        Architecto cumque est fugiat, magni, nam nostrum, obcaecati qui saepe voluptate voluptates
+                        voluptatum.</p>
+                    <div className='btn'>
+                        <Button className='btnStart'>Get Started</Button>
+                        <Button className='btnHosting'> Hosting Plans</Button>
                     </div>
-                    <div className='smartCompanyTitle'>
-                        <h1 className='titleSmart'>
-                            Smart Company<br/>
-                            With Perfect<br/>
-                            Web Space
-                        </h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum magni obcaecati temporibus. Architecto cumque est fugiat, magni, nam nostrum, obcaecati qui saepe voluptate voluptates voluptatum.</p>
-                        <div className='btn'>
-                            <Button className='btnStart'>Get Started</Button>
-                            <Button className='btnHosting'> Hosting Plans</Button>
+                    <div className='review'>
+                        <div className='positive'>
+                            <h2>800</h2>
+                            <p>Positive Reviews</p>
                         </div>
-                        <div className='review'>
-                            <div className='positive'>
-                                <h2>800</h2>
-                                <p>Positive Reviews</p>
-                            </div>
-                            <div className='active'>
-                                <h2>550</h2>
-                                <p>Active Hosting</p>
-                            </div>
+                        <div className='active'>
+                            <h2>550</h2>
+                            <p>Active Hosting</p>
                         </div>
-                    </div>
-                    <div>
-
                     </div>
                 </div>
+                <div>
 
-                <div className='imageNiggaWithMac'>
-                    <Nigga/>
+                </div>
+            </div>
 
-                    <div className='def'>
-                        <div >
-                            <div style={{display:"flex"}}>
-                                <ICDefends/>
-                                <h3 style={{padding:'5px',margin:"0",fontSize:'25px'}}>Premium SSL</h3>
-                            </div>
+            <div className='mainImg'>
+                <MainImg/>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div>
-                        <div>
-                            <div style={{display:"flex"}}>
-                                <ICSupport/>
-                                <h3 style={{padding:'5px',margin:"0",fontSize:'25px'}}>24/7 Support</h3>
-                            </div>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                <div className='def'>
+                    <div>
+                        <div style={{display: "flex"}}>
+                            <ICDefends/>
+                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>Premium SSL</h3>
                         </div>
 
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </div>
-                    <div className='wifi'>
-                        <div style={{display:"flex"}}>
-                            <ICPowerFull/>
-                            <h3 style={{padding:'5px',margin:"0",fontSize:'25px'}}>Powerfull Server</h3>
+                    <div>
+                        <div style={{display: "flex"}}>
+                            <ICSupport/>
+                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>24/7 Support</h3>
                         </div>
 
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </div>
 
                 </div>
+                <div className='wifi'>
+                    <div style={{display: "flex"}}>
+                        <ICPowerFull/>
+                        <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>Powerfull Server</h3>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+
             </div>
+        </div>
 
 
-        </Wrapper>
-   );
+    </Wrapper>);
 };
 
 
@@ -129,8 +128,9 @@ const Wrapper = styled.div`
     }
   }
 
-  .imageNiggaWithMac {
+  .mainImg {
     padding-right: 50px;
+    padding-bottom: 70px;
     position: relative;
     display: flex;
   }
@@ -149,7 +149,7 @@ const Wrapper = styled.div`
 
     p {
       font-size: 20px;
-      
+
       padding-right: 25px;
       font-style: italic;
       color: #FF885B;
@@ -188,7 +188,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 1200px) {
-    .imageNiggaWithMac {
+    .mainImg {
       z-index: 0;
     }
 
@@ -197,97 +197,180 @@ const Wrapper = styled.div`
     }
 
   }
-  @media(max-width: 1050px){
-    .smartCompanyTitle{
-      order: 1;
-      h1{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-       
-      }
-      p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-inline: 10px;
-        width: 50%;
-        text-align: center;
-        margin: 0 auto;
-        padding-bottom: 20px;
+  @media (max-width: 1160px) {
+    .containerSmartCompany {
+      flex-direction: column;
+
+      .smartCompanyTitle {
+        order: 1;
+
+        h1 {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+
         }
-      .btn{
-     
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-inline: 10px;
+          width: 50%;
+          text-align: center;
+          margin: 0 auto;
+          padding-bottom: 20px;
+        }
+
+        .btn {
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
-      .review{
+
+      .review {
         margin-top: 15px;
         justify-content: center;
         align-items: center;
-        h2{
+
+        h2 {
           display: flex;
           justify-content: center;
           margin: 0;
         }
-        p{
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-      .positive{
-        margin-top: 15px;
-        p{
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
-    .imageNiggaWithMac{
-      order: 2;
-    }
-  .containerSmartCompany{
-    flex-direction: column;
-    
-  }
-  .descriptionSmart{
-    width: 100%;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-  }
 
-  }
-  
-  @media(max-width: 700px){
-    .imageNiggaWithMac{
-      padding: 0;
-      
+        p {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .positive {
+
+        p {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
-    .def{
-      right: -5%;
+
+    @media (max-width: 1050px) {
+      .smartCompanyTitle {
+        order: 1;
+
+        h1 {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+
+        }
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-inline: 10px;
+          width: 50%;
+          text-align: center;
+          margin: 0 auto;
+          padding-bottom: 20px;
+        }
+
+        .btn {
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .review {
+          margin-top: 15px;
+          justify-content: center;
+          align-items: center;
+
+          h2 {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+          }
+
+          p {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .positive {
+
+          p {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .mainImg {
+        order: 2;
+      }
+
+      .containerSmartCompany {
+        flex-direction: column;
+
+      }
+
+      .descriptionSmart {
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
     }
-    .wifi{
-      right: 40%;
+
+    @media (max-width: 700px) {
+      .mainImg {
+        padding: 0;
+
+      }
+
+      .def {
+        right: -5%;
+      }
+
+      .wifi {
+        right: 40%;
+      }
     }
-  }
-  @media(max-width: 679px){
-    .imageNiggaWithMac{
-      display: none;
+    @media (max-width: 679px) {
+      .mainImg {
+        display: none;
+      }
+
     }
-    
-  }
-  @media(max-width: 425px){
-    .imageNiggaWithMac{
-      display: none;
+    @media (max-width: 425px) {
+      .mainImg {
+        display: none;
+      }
+
+      .smartCompanyTitle {
+        h1 {
+          font-size: 30px;
+          font-style: italic;
+        }
+      }
     }
-   
   }
 `
 

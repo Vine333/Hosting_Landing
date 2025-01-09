@@ -101,7 +101,7 @@ const Wrapper = styled.div`
     width: 300px;
     height: 300px;
     background-color: #3b3a3a;
-   // background-color:#5f8cc7 ; под вопросом ?
+    //background-color:#5f8cc7 ; под вопросом ?
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -218,6 +218,15 @@ const Wrapper = styled.div`
       width: 100%;
     }
   }
-
+@media(max-width: 425px){
+  .container {
+ 
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+}
 `
 export default OurService;

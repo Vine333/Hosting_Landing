@@ -21,8 +21,12 @@ import ICLocal from "./ICLocal.jsx";
 import ICMessage from "./ICMassange.jsx";
 import ICPhone from "./ICPhone.jsx";
 import ICTime from "./ICTime.jsx";
+import ICLanguage from "./ICLanguage.jsx";
+import ICMenu from "./ICMenu.jsx";
 
 export{
+    ICMenu,
+    ICLanguage,
 ICTime,
     ICPhone,
     ICMessage,

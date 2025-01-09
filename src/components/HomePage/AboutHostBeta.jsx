@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Button from "../common/Button.jsx";
-import {JumpMen} from "../../assets/svg/index.js";
+import {AboutImg} from "../../assets/svg/index.js";
 import {ICDaily, ICStorage} from "../../icons/index.js";
 
 const AboutHostBeta = () => {
@@ -9,19 +9,19 @@ const AboutHostBeta = () => {
         <Wrapper>
             <div className='container'>
                 <div className='imgJump'>
-                    <JumpMen/>
+                    <AboutImg/>
                     <div className='storage'>
                         <ICStorage/>
-                       <p>200 GB+ Storage</p>
+                        <p>200 GB+ Storage</p>
                     </div>
                     <div className='visitors'>
-                        <ICDaily/>
+                        <ICDaily width={64} height={64}/>
                         <p>500K+ Daily Visitors</p>
                     </div>
                 </div>
                 <div className='perfectDigital'>
                     <div className='about'>
-                       ABOUT HOST BETA
+                        ABOUT HOST BETA
                     </div>
 
                     <h1>The Perfect Digital
@@ -66,24 +66,28 @@ const Wrapper = styled.div`
     }
 
   }
-  .storage{
+
+  .storage {
     position: absolute;
     top: 200px;
     left: 30px;
     width: 50%;
     padding: 5px;
-    p{
+
+    p {
       padding-left: 20px;
       font-size: 20px;
       font-weight: 500;
     }
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color:#FF885B;
+    background-color: #FF885B;
   }
-  .visitors{
-    padding: 5px  ;
+
+  .visitors {
+    padding: 5px;
     position: absolute;
     bottom: 200px;
     left: 300px;
@@ -91,20 +95,23 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color:#FF885B;
-    p{
+    background-color: #FF885B;
+
+    p {
       padding-left: 20px;
       font-size: 20px;
       font-weight: 500;
     }
   }
-.btnDigital{
-  margin-top: 20px;
-  background-color: #FF885B ;
-  border: none;
-  width: 150px;
-  height: 70px;
-}
+
+  .btnDigital {
+    margin-top: 20px;
+    background-color: #FF885B;
+    border: none;
+    width: 150px;
+    height: 70px;
+  }
+
   .perfectDigital {
     display: flex;
     flex-direction: column;
@@ -126,7 +133,7 @@ const Wrapper = styled.div`
       font-size: 20px;
       color: rgba(211, 211, 211, 0.39);
       margin: 0 0 60px 0;
-      
+
     }
 
   }
@@ -147,7 +154,8 @@ const Wrapper = styled.div`
     flex-direction: column;
     gap: 70px;
     font-size: 25px;
-    a{
+
+    a {
       color: #FF885B;
     }
   }
@@ -158,71 +166,88 @@ const Wrapper = styled.div`
     gap: 70px;
     padding-right: 10px;
     font-size: 25px;
-    a{
+
+    a {
       color: #FF885B;
     }
   }
 
   .imgJump {
-   position: relative;
+    position: relative;
     padding-left: 100px;
   }
-  @media(max-width: 1171px){
-    .perfectDigital{
+
+  @media (max-width: 1171px) {
+    .perfectDigital {
       padding: 50px;
       justify-content: center;
       align-items: center;
       align-self: center;
       width: 100%;
       order: 1;
-      h1{
+
+      h1 {
         text-align: center;
       }
-      p{
+
+      p {
         text-align: center;
       }
     }
-    .container{
-    
+
+    .container {
+
       flex-direction: column;
     }
-    .imgJump{
+
+    .imgJump {
       margin-top: 20px;
       order: 2;
     }
   }
-  @media(max-width: 675px){
-    .imgJump{
+  @media (max-width: 675px) {
+    .imgJump {
       display: none;
     }
   }
-@media(max-width: 501px){
-  .column{
-flex-direction: column;
- 
-    
-  }
-  .column1{
-    align-items: center;
-    justify-content: center;
+  @media (max-width: 501px) {
+    .column {
+      flex-direction: column;
 
-    order: 1;
-}
-  .column2{
-    align-items: center;
-    justify-content: center;
-   
-    order: 2;
+
+    }
+
+    .column1 {
+      align-items: center;
+      justify-content: center;
+
+      order: 1;
+    }
+
+    .column2 {
+      align-items: center;
+      justify-content: center;
+
+      order: 2;
+    }
+
+    .container {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .perfectDigital {
+      padding: 10px;
+    }
   }
-.container{
-  flex-direction: column;
-  padding: 0;
-}
-.perfectDigital{
-  padding: 10px;
-}
-}
   
-  
+  @media (max-width: 425px) {
+    .perfectDigital {
+      h1 {
+        font-size: 30px;
+        margin: 0;
+
+      }
+    }
 `
 export default AboutHostBeta;

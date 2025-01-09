@@ -246,6 +246,21 @@ const Wrapper = styled.div`
       display: none;
     }
   }
+  @media(max-width: 425px){
+    .title {
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        color: white;
+      }
+    }
+    .testimon {
+      justify-content: center;
+      align-items: center;
+
+    }
+  }
+  
 
 `
 

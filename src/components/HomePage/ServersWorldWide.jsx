@@ -71,7 +71,12 @@ const ServersWorldWide = () => {
    @media(max-width: 500px ){
      svg{
        display: none;
+     }}
+     @media(max-width: 425px){
+       .container{
+         display: none;
+       }
      }
-   }
+   
  `
 export default ServersWorldWide;

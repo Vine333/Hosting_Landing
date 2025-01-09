@@ -178,6 +178,7 @@ const Wrapper = styled.div`
     }
     .column1{
       text-align: start;
+      
     }
     .column2{
       text-align: start;
@@ -188,6 +189,18 @@ const Wrapper = styled.div`
      width: 100%;
    }
   }
+@media(max-width: 425px){
+  .descriptions {
+   
+padding: 10px;
+    width: 100%;
 
+    h1 {
+      margin: 0;
+      color: white;
+      font-size: 30px;
+    }
+  }
+  }
 `
 export default OurCapabilities;

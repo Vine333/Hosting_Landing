@@ -3,8 +3,10 @@ import styled from "styled-components";
 import {ICInsta, ICLocal, ICMessage, ICPhone, ICTime, ICTwitter, ICYouTube} from "../../icons/index.js";
 import ICFacebook from "../../icons/ICFacebook";
 import ICIn from "../../icons/ICIn";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const Footer = () => {
+    const {__i}=useLanguage()
     return (
         <Wrapper>
             <div className='container'>
@@ -20,27 +22,27 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='getInTouch'>
-                    <h1>Get In Touch</h1>
+                    <h1>{__i("Get In Touch")}</h1>
                     <a href=""><ICLocal className='item'/>    Richardson, California 62639</a>
                     <a href=""><ICMessage className='item'/> felicia.reid@example.com</a>
                     <a href=""><ICPhone className='item'/> (405) 555-0128</a>
                     <a href=""><ICTime className='item'/> December 19, 2022</a>
                 </div>
                 <div className='quick'>
-                    <h1>Quicklinks</h1>
-                    <a href="">Home</a>
-                    <a href="">About</a>
-                    <a href="">Team</a>
-                    <a href="">Pricing</a>
-                    <a href="">Blog</a>
+                    <h1>{__i('Quicklinks')}</h1>
+                    <a href="">{__i('Home')}</a>
+                    <a href="">{__i('About')}</a>
+                    <a href="">{__i('Team')}</a>
+                    <a href="">{__i("Prising")}</a>
+                    <a href="">{__i('Blog')}</a>
                 </div>
                 <div className='support'>
-                    <h1>Support</h1>
-                    <a href="">Help Center</a>
-                    <a href="">Careers</a>
-                    <a href="">FAQs</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Contact </a>
+                    <h1>{__i('Support')}</h1>
+                    <a href="">{__i('Help Center')}</a>
+                    <a href="">{__i('Careers')}</a>
+                    <a href="">{__i('FAQs')}</a>
+                    <a href="">{__i('Privacy Policy')}</a>
+                    <a href="">{__i('Contact')} </a>
                 </div>
             </div>
         </Wrapper>
@@ -56,6 +58,7 @@ width : 100%;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
+ 
   }
   .logo{
     display: flex;
@@ -85,6 +88,7 @@ width : 100%;
     flex-direction: column;
     gap:20px;  
     align-self: center;
+    margin-right: 15px;
     h1{
       color: white;
       font-size: 30px;

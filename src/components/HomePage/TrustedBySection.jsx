@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const TrustedBySection = () => {
+    const {__i}=useLanguage()
     return (<Wrapper>
 
         <div className='container '>
-            <h1>Trusted by 2500+ Company Worldwide</h1>
+            <h1>{__i("Trusted by 2500+ Company Worldwide")}</h1>
             <div className='brands'>
 
                 <img src="src/assets/img/client_9-1536x768.png" alt=""/>

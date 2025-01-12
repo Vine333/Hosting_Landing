@@ -3,9 +3,12 @@ import styled from "styled-components";
 import Button from "../common/Button.jsx";
 import ICStars from "../../icons/ICStars";
 import videoSrc from '/src/assets/img/coverr-a-productive-morning-4822-4_3-1080p.mp4';
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const Testimonials = () => {
+    const {__i}=useLanguage()
+
     return (<Wrapper>
         <div className='container'>
             <div className='testimon'>
@@ -13,11 +16,11 @@ const Testimonials = () => {
             </div>
             <div className="title">
                 <h2>
-                    What Customers Say<br/>
-                    About Us
+                    {__i(" What Customers Say")}<br/>
+                    {__i("About Us")}
                 </h2>
                 <Button className='btn'>
-                    View More
+                    {__i('View More')}
                 </Button>
             </div>
             <div className='cards'>

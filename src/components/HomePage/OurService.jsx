@@ -1,49 +1,51 @@
 import React from 'react';
 import styled from "styled-components";
 import {ICWord, ICCloud, ICWorld, ICDomain, ICDefends, ICStorage} from "../../icons/index.js";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const OurService = () => {
+    const {__i}=useLanguage()
     return (<Wrapper>
         <div className='container'>
             <div className='ourService'>
                 OUR SERVICE
             </div>
-            <h1>Discover Luxury in Web<br/>Hosting</h1>
+            <h1>{__i("Discover Luxury in Web")}<br/>{__i("Hosting")}</h1>
             <div className='content'>
                 <div className='line1'>
                     <div className='card'>
                         <ICWord style={{scale: '2'}}/>
-                        <h3>World Hosting</h3>
+                        <h3>{__i('World Hosting')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
                     </div>
                     <div className='card'>
                         <ICCloud style={{scale: '2'}}/>
-                        <h3>Cloud Hosting</h3>
+                        <h3>{__i('Cloud Hosting')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, nobis!</p>
                     </div>
                     <div className='card'>
                         <ICWorld style={{scale: '2'}}/>
-                        <h3>Website Hosting</h3>
+                        <h3>{__i('Website Hosting')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, doloribus!</p>
                     </div>
                 </div>
                 <div className='line2'>
                     <div className='card'>
                         <ICDomain style={{scale: '2'}}/>
-                        <h3>Free Domain</h3>
+                        <h3>{__i('Free Domain')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ratione?</p>
                     </div>
                     <div className='card'>
                         <ICDefends style={{scale: '2'}}/>
-                        <h3>SSL Service</h3>
+                        <h3>{__i('SSL Service')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, nesciunt.</p>
 
                     </div>
                     <div className='card'>
                         <ICStorage style={{scale: '2'}}/>
-                        <h3>Clouds VPS</h3>
+                        <h3>{__i('Clouds VPN')}</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, cumque.</p>
                     </div>
                 </div>

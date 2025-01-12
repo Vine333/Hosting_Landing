@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Button from "../../components/common/Button.jsx";
 import {ICSupport, ICPowerFull, ICDefends,} from '/src/icons/index.js'
 import {MainImg} from '/src/assets/svg/Index.js'
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const WelcomeToHostBeta = () => {
+    const {__i}=useLanguage()
     return (<Wrapper>
         <div className='containerSmartCompany'>
             <div className='descriptionSmart'>
@@ -15,25 +17,25 @@ const WelcomeToHostBeta = () => {
                 </div>
                 <div className='smartCompanyTitle'>
                     <h1 className='titleSmart'>
-                        Smart Company<br/>
-                        With Perfect<br/>
-                        Web Space
+                        {__i("Smart Company")}<br/>
+                        {__i("With Perfect")}<br/>
+                        {__i('Web Space')}
                     </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum magni obcaecati temporibus.
                         Architecto cumque est fugiat, magni, nam nostrum, obcaecati qui saepe voluptate voluptates
                         voluptatum.</p>
                     <div className='btn'>
-                        <Button className='btnStart'>Get Started</Button>
-                        <Button className='btnHosting'> Hosting Plans</Button>
+                        <Button className='btnStart'>{__i("Get Start")}</Button>
+                        <Button className='btnHosting'> {__i("Hosting Plans")}</Button>
                     </div>
                     <div className='review'>
                         <div className='positive'>
                             <h2>800</h2>
-                            <p>Positive Reviews</p>
+                            <p>{__i("Positive Reviews")}</p>
                         </div>
                         <div className='active'>
                             <h2>550</h2>
-                            <p>Active Hosting</p>
+                            <p>{__i("Active Hosting")}</p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +51,7 @@ const WelcomeToHostBeta = () => {
                     <div>
                         <div style={{display: "flex"}}>
                             <ICDefends/>
-                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>Premium SSL</h3>
+                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>{__i('Premium SSL')}</h3>
                         </div>
 
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
@@ -57,7 +59,7 @@ const WelcomeToHostBeta = () => {
                     <div>
                         <div style={{display: "flex"}}>
                             <ICSupport/>
-                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>24/7 Support</h3>
+                            <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>{__i("24/7 Support")}</h3>
                         </div>
 
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
@@ -67,7 +69,7 @@ const WelcomeToHostBeta = () => {
                 <div className='wifi'>
                     <div style={{display: "flex"}}>
                         <ICPowerFull/>
-                        <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>Powerfull Server</h3>
+                        <h3 style={{padding: '5px', margin: "0", fontSize: '25px'}}>{__i("Powerfull Server")}</h3>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>

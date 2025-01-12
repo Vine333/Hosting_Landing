@@ -2,9 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import {ICCheckMark, ICElementor, ICGit, ICLaravel, ICWord} from "../../icons/index.js";
 import Button from "../common/Button.jsx";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const OurCapabilities = () => {
+    const {__i} = useLanguage();
     return (<Wrapper>
         <div className='container'>
             <div className='label'>
@@ -29,34 +31,34 @@ const OurCapabilities = () => {
                 <div className='capabilities'>
                     OUR CAPABILITIES
                 </div>
-                <h1>From Skyline to the Shoreline,<br/>
-                    We Are There</h1>
+                <h1>{__i("From Skyline to the Shoreline")},<br/>
+                    {__i('We Are There')}</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br/> Accusantium aut id impedit maiores
                     perspiciatis reiciendis.</p>
                 <div className='details'>
                     <div className='column1'>
                         <div className='item'>
                             <ICCheckMark/>
-                            Unlimited Bandwidth
+                            {__i("Unlimited Bandwidth")}
                         </div>
                         <div className='item'>
                             <ICCheckMark/>
-                            Super Turbo Power
+                            {__i('Super Turbo Power')}
                         </div>
                     </div>
                     <div className='column2'>
                         <div className='item'>
                             <ICCheckMark/>
-                            Unlimited Site
+                            {__i('Unlimited Site')}
                         </div>
                         <div className='item'>
                             <ICCheckMark/>
-                            24/7 Full Support More Detail
+                            {__i("24/7 Full Support")}
                         </div>
                     </div>
                 </div>
                 <Button className='btn'>
-                    More Detail
+                    {__i('More Detail')}
                 </Button>
             </div>
         </div>
@@ -162,45 +164,50 @@ const Wrapper = styled.div`
     width: 150px;
     height: 70px;
   }
-  @media(max-width: 946px){
-    .container{
+
+  @media (max-width: 946px) {
+    .container {
       flex-direction: column;
     }
-    .descriptions{
+
+    .descriptions {
       justify-content: center;
       align-items: center;
       text-align: center;
       order: 1;
     }
-    .label{
+
+    .label {
       order: 2;
       width: 100%;
     }
-    .column1{
-      text-align: start;
-      
-    }
-    .column2{
-      text-align: start;
-    }
-  }
-  @media(max-width: 471px){
-   .card{
-     width: 100%;
-   }
-  }
-@media(max-width: 425px){
-  .descriptions {
-   
-padding: 10px;
-    width: 100%;
 
-    h1 {
-      margin: 0;
-      color: white;
-      font-size: 30px;
+    .column1 {
+      text-align: start;
+
+    }
+
+    .column2 {
+      text-align: start;
     }
   }
+  @media (max-width: 471px) {
+    .card {
+      width: 100%;
+    }
+  }
+  @media (max-width: 425px) {
+    .descriptions {
+
+      padding: 10px;
+      width: 100%;
+
+      h1 {
+        margin: 0;
+        color: white;
+        font-size: 30px;
+      }
+    }
   }
 `
 export default OurCapabilities;

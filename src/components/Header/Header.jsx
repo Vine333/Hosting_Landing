@@ -4,20 +4,13 @@ import {useNavigate} from "react-router-dom";
 import {ICDaily, ICLanguage, ICMenu} from "../../icons/index.js";
 import Button from "../common/Button.jsx";
 import {Drawer,Space, Switch} from "antd";
-import useGlobalStore from "../../store/useGlobalStore.js";
-import {useShallow} from "zustand/react/shallow";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const Header = () => {
 const navigate = useNavigate();
+const {language,changeLanguage,__i}=useLanguage()
 
-const {
-    setLanguage,
-    language,
-}= useGlobalStore(useShallow(state=>({
-    language:state.language,
-    setLanguage:state.setLanguage,
-})))
     const [isOpen, setIsOpen] = useState(false);
     const [isOpens, setIsOpens] = useState(false);
 
@@ -46,10 +39,10 @@ const {
         setOpen(false);
     };
 
-    const handleLanguageChange = (language) => {
-        setLanguage(language);
-        setIsOpen(false);
-    };
+    // const handleLanguageChange = (language) => {
+    //     setLanguage(language);
+    //     setIsOpen(false);
+    // };
 
 
     const NavigateToLogin = () =>{
@@ -69,11 +62,11 @@ const {
 
             </div>
             <div className='links'>
-                <a>Home</a>
-                <a>About </a>
-                <a>Service</a>
-                <a> Prising</a>
-                <a>Testimonials</a>
+                <a>{__i("Home")}</a>
+                <a>{__i("About")} </a>
+                <a>{__i("Service")}</a>
+                <a> {__i("Prising")}</a>
+                <a>{__i("Testimonials")}</a>
 
             </div>
             <div className='iconsHeader'>
@@ -93,10 +86,10 @@ const {
                             className="openAccount"
                         >
                             <Button style={{margin:'5px'}} onClick={()=> NavigateToLogin()}>
-                                Войти
+                                {__i("Sign In")}
                             </Button>
-                           <Button style={{margin:'5px'}} onClick={()=> NavigateToLogin()}>
-                                Зарегистрироваться
+                           <Button style={{margin:'5px',padding:'3px'}} onClick={()=> NavigateToLogin()}>
+                               {__i("Sign Up")}
                             </Button>
                         </div>
                     )}
@@ -165,7 +158,8 @@ const {
                                         textAlign: 'left',
                                         color: '#ffffff',
                                     }}
-                                    onClick={() => handleLanguageChange('EN')}
+                                    onClick={() => changeLanguage('EN')}
+
                                 >
                                     English
                                 </button>
@@ -180,7 +174,7 @@ const {
                                         textAlign: 'left',
                                         color: '#ffffff',
                                     }}
-                                    onClick={() => handleLanguageChange('RU')}
+                                    onClick={() => changeLanguage('RU')}
                                 >
                                     Русский
                                 </button>
@@ -210,7 +204,7 @@ const {
                     marginRight: '10px',
                 }}
                     >
-                    Войти
+                        {__i("Sign In")}
                     </button>
 
                     </div>
@@ -219,7 +213,7 @@ const {
                     <Space direction="vertical">
                         <Switch
                             checked={language === 'RU'}
-                            onChange={(checked) => handleLanguageChange(checked ? 'RU' : 'EN')}
+                            onChange={(checked) => changeLanguage(checked ? 'RU' : 'EN')}
                             checkedChildren="RU"
                             unCheckedChildren="EN"
                         />
@@ -232,11 +226,11 @@ const {
                         transition: "background-color 0.3s, color 0.3s",
                         cursor: "pointer",
                     }}>
-                        <p onClick={()=>NavigateHome()}>Home</p>
-                        <p >About</p>
-                        <p >Service</p>
-                        <p >Prising</p>
-                        <p >Testimonials</p>
+                        <p onClick={()=>NavigateHome()}>{__i("Home")}</p>
+                        <p>{__i("About")} </p>
+                        <p>{__i("Service")}</p>
+                        <p> {__i("Prising")}</p>
+                        <p>{__i("Testimonials")}</p>
                     </div>
 
 
@@ -270,6 +264,8 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     flex-direction: row;
+ position: absolute;
+    right: 0;
 
   }
 
@@ -277,8 +273,8 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 68%;
-    right: 19%;
+    top: 78%;
+    right: 70%;
     background-color: #1e1e2e;
     border: 1px solid #444;
     border-radius: 8px;

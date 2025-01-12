@@ -4,16 +4,18 @@ import Button from "../common/Button.jsx";
 
 import {ICCheckMark} from "../../icons/index.js";
 import StartImg from "../../assets/svg/StartImg.jsx";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const GetStarted = () => {
+    const {__i}=useLanguage()
     return (<Wrapper>
         <div className='container'>
             <div className='title'>
                 <div className='getstart'>GET STARTED</div>
                 <div className='descriptions'>
-                    <h2>
-                        Let's Start Here! New<br/>
-                        Space for World
+                    <h2>{__i(" Let's Start Here! New")}
+                        <br/>
+                        {__i(" Space for World")}
                     </h2>
                     <span>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur laudantium maxime nobis quos, voluptate voluptatibus!
@@ -22,10 +24,10 @@ const GetStarted = () => {
                 </div>
                 <div className='btnContainer'>
                     <Button className='btnStart'>
-                        Get Started
+                        {__i('Get Started')}
                     </Button>
                     <Button className='btnHost'>
-                        Hosting Plans
+                        {__i('Hosting Plans')}
                     </Button>
                 </div>
 
@@ -34,15 +36,15 @@ const GetStarted = () => {
                 <div className='card'>
                     <div>
                         <div className=' check'>✓</div>
-                        Unlimited Bandwidth
+                        {__i('Unlimited Bandwidth')}
                     </div>
                     <div>
                         <div className=' check'>✓</div>
-                        Super Turbo Power
+                        {__i('Super Turbo Power')}
                     </div>
                     <div>
                         <div className=' check'>✓</div>
-                        24/7 Full Support More Detail
+                        {__i("24/7 Full Support")}
                     </div>
 
                 </div>

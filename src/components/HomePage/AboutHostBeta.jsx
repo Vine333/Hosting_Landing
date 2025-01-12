@@ -3,8 +3,12 @@ import styled from "styled-components";
 import Button from "../common/Button.jsx";
 import {AboutImg} from "../../assets/svg/index.js";
 import {ICDaily, ICStorage} from "../../icons/index.js";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const AboutHostBeta = () => {
+
+    const {__i,language}=useLanguage()
+    const gapValue = language === 'RU' ? '30px' : '70px';
     return (
         <Wrapper>
             <div className='container'>
@@ -12,11 +16,11 @@ const AboutHostBeta = () => {
                     <AboutImg/>
                     <div className='storage'>
                         <ICStorage/>
-                        <p>200 GB+ Storage</p>
+                        <p>{__i('200 GB+ Storage')}</p>
                     </div>
                     <div className='visitors'>
                         <ICDaily width={64} height={64}/>
-                        <p>500K+ Daily Visitors</p>
+                        <p>{__i("500K+ Daily Visitors")}</p>
                     </div>
                 </div>
                 <div className='perfectDigital'>
@@ -24,21 +28,20 @@ const AboutHostBeta = () => {
                         ABOUT HOST BETA
                     </div>
 
-                    <h1>The Perfect Digital
-                        Connection</h1>
+                    <h1>{__i('The Perfect Digital Connection')}</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur adipiscing.</p>
                     <div className='column'>
                         <div className='column1'>
-                            <div><a href="">Faster Process</a></div>
-                            <div><a href="">Faster Access</a></div>
+                            <div><a href="">{__i('Faster Process')}</a></div>
+                            <div><a href="">{__i('Faster Access')}</a></div>
                         </div>
-                        <div className='column2'>
-                            <div><a href="">Faster Delivery</a></div>
-                            <div><a href="">24/7 Full Support</a></div>
+                        <div className='column2' style={{gap:gapValue}}>
+                            <div><a href="">{__i("Faster Delivery")}</a></div>
+                            <div><a href="">{__i('24/7 Full Support')}</a></div>
                         </div>
                     </div>
                     <Button className='btnDigital'>
-                        Discover More
+                        {__i("Discover More")}
                     </Button>
                 </div>
 
@@ -145,7 +148,8 @@ const Wrapper = styled.div`
   .column {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    text-align: left;
     gap: 50px;
   }
 
@@ -163,9 +167,9 @@ const Wrapper = styled.div`
   .column2 {
     display: flex;
     flex-direction: column;
-    gap: 70px;
     padding-right: 10px;
     font-size: 25px;
+    
 
     a {
       color: #FF885B;

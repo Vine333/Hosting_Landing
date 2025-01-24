@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from "../../components/common/Button.jsx";
+import {Button} from "antd";
 import {ICSupport, ICPowerFull, ICDefends,} from '/src/icons/index.js'
 import {MainImg} from '/src/assets/svg/Index.js'
 import {useLanguage} from "../../hooks/useTranslate.jsx";
@@ -25,8 +25,8 @@ const WelcomeToHostBeta = () => {
                         Architecto cumque est fugiat, magni, nam nostrum, obcaecati qui saepe voluptate voluptates
                         voluptatum.</p>
                     <div className='btn'>
-                        <Button className='btnStart'>{__i("Get Start")}</Button>
-                        <Button className='btnHosting'> {__i("Hosting Plans")}</Button>
+                        <Button defaultHoverBg='#FF885B' className='btnStart'>{__i("Get Start")}</Button>
+                        <Button defaultHoverBg='transparent' className='btnHosting'> {__i("Hosting Plans")}</Button>
                     </div>
                     <div className='review'>
                         <div className='positive'>
@@ -113,22 +113,41 @@ const Wrapper = styled.div`
       font-style: italic;
     }
   }
-
+  .btnHosting {
+    font-size: 15px;
+    font-weight: 500;
+    width: 150px;
+    height: 44px; 
+    background-color:transparent ;
+    border: 1px solid #FF885B;
+    color: #ffffff;
+    border-radius: 7px;
+    }
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+    border: 1px solid #FF885B;
+    color: #ffffff;
+    scale: 105%;
+    transition: 0.2s;
+    background: none;
+  }
   .btnStart {
     margin-right: 10px;
     background-color: #FF885B;
-    border: none;
 
-    &:hover {
-      color: whitesmoke;
+
+    font-size: 15px;
+    font-weight: 500;
+    width: 150px;
+    height: 44px;
+
+    border: 1px solid #FF885B;
+    color: #ffffff;
+    border-radius: 7px;
+    &:hover{
+      background: #FF885B !important;
     }
   }
 
-  .btnHosting {
-    &:hover {
-      color: whitesmoke;
-    }
-  }
 
   .mainImg {
     padding-right: 50px;

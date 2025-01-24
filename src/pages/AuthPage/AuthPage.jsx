@@ -1,30 +1,40 @@
 import React from 'react';
 import styled from "styled-components";
-import AppLayout from "../../layouts";
+import AppLayout from "../../layouts/index.jsx";
 import Button from "/src/components/common/Button.jsx";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
+import {useNavigate} from "react-router-dom";
+import Header from "../../components/Header/Header.jsx";
+
 
 const AuthPage = () => {
+    const {__i}=useLanguage();
+    const navigate=useNavigate()
 
+    const NavigateToAccount=()=>{
+        navigate('/account')
+    }
     return (<AppLayout>
+
 
         <Container>
                 <h5 >
-                    Username
+                    {__i(" Username")}
                 </h5>
-            <input placeholder="Email or Phone" type='email'/>
+            <input placeholder={__i("Email or Phone")} type='email'/>
 
             <h5>
-                Password
+                {__i('Password')}
             </h5>
-            <input placeholder='Password'  type='password'/>
+            <input placeholder={__i('Password')}  type='password'/>
 
-            <p><a href="">Forgot Password?</a></p>
+            <p><a href="src/pages/AuthPage/AuthPage.jsx">{__i("Forgot Password?")}</a></p>
 
             <div className='btnAuth'>
 
-                <Button> SIGN IN </Button>
+                <Button onClick={()=>NavigateToAccount()}> {__i("Sign In")}</Button>
 
-                <Button> SIGN UP </Button>
+                <Button style={{padding:"3px"}}> {__i("Sign Up")} </Button>
 
             </div>
 

@@ -61,13 +61,20 @@ export const translations = {
         "Careers":"Careers",
         "FAQs":"FAQs",
         "Privacy Policy":"Privacy Policy",
-        "Contact":"Contact"
-
+        "Contact":"Contact",
+        "Forgot Password?":"Forgot Password?",
+        "Password":"Password",
+        " Username":" Username",
+        "Email or Phone":"Email or Phone",
 
 
 
 
     }, RU: {
+        "Email or Phone":"Электронная почта или телефон",
+        " Username":"Имя пользователя",
+        "Password":"Пароль",
+        "Forgot Password?":"Забыли пароль?",
         "Contact":"Контакт",
         "Privacy Policy":"Политика конфиденциальности",
         "FAQs":"ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",

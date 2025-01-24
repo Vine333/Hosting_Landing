@@ -54,35 +54,12 @@ const Wrapper = styled.div`
     margin-top: 20px;
   }
 
-  @media (max-width: 1300px ) {
-    svg {
-      width: 1000px;
-      height: 637px;
+  @media (max-width: 1430px ) {
+    .container{
+    display: none;
     }
   }
-  @media (max-width: 1000px ) {
-    svg {
-      width: 700px;
-      height: 437px;
-    }
-  }
-  @media (max-width: 721px ) {
-    svg {
-      width: 500px;
-      height: 237px;
-    }
-  }
-
-  @media (max-width: 500px ) {
-    svg {
-      display: none;
-    }
-  }
-  @media (max-width: 425px) {
-    .container {
-      display: none;
-    }
-  }
+ 
 
 `
 export default ServersWorldWide;

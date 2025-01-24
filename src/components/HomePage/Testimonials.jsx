@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from "../common/Button.jsx";
+import {Button} from "antd";
 import ICStars from "../../icons/ICStars";
 import videoSrc from '/src/assets/img/coverr-a-productive-morning-4822-4_3-1080p.mp4';
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const Testimonials = () => {
-    const {__i}=useLanguage()
+    const {__i} = useLanguage()
 
     return (<Wrapper>
         <div className='container'>
@@ -69,7 +69,7 @@ const Testimonials = () => {
                     </div>
                 </div>
                 <Button className="button">
-                    View More
+                    {__i('View More')}
                 </Button>
             </div>
         </div>
@@ -126,15 +126,38 @@ const Wrapper = styled.div`
   }
 
   .btn {
+    font-weight: 500;
+    font-size: 15px;
     margin-top: 20px;
     background-color: #FF885B;
     border: none;
     width: 150px;
     height: 70px;
+    color: #FFFFFF !important;
+
+    &:hover {
+      scale: 105%;
+    }
   }
 
   .button {
+    font-weight: 500;
+    font-size: 15px;
     display: none;
+    color: #FFFFFF !important;
+
+    &:hover {
+      scale: 105%;
+    }
+  }
+
+  :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):active {
+    border: #FF885B !important;
+    background: #FF885B !important;
+  }
+
+  :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+    border: #FF885B;
   }
 
   .card {
@@ -157,13 +180,7 @@ const Wrapper = styled.div`
   .avatar {
     display: flex;
   }
-
-  //.stars {
-  //  display: flex;
-  //  justify-content: center;
-  //  align-items: flex-start;
-  //}
-
+  
   .cards {
     display: flex;
     justify-content: space-between;
@@ -203,8 +220,9 @@ const Wrapper = styled.div`
       align-items: center;
       gap: 30px;
     }
-    .frame{
-      video{
+
+    .frame {
+      video {
         margin-left: 28px;
         width: 90%;
       }
@@ -249,7 +267,7 @@ const Wrapper = styled.div`
       display: none;
     }
   }
-  @media(max-width: 425px){
+  @media (max-width: 425px) {
     .title {
       h2 {
         margin: 0;
@@ -257,14 +275,30 @@ const Wrapper = styled.div`
         color: white;
       }
     }
+
     .testimon {
       justify-content: center;
       align-items: center;
 
     }
   }
-  
 
+@media(max-width: 1024px){
+  .testimon{
+    justify-content: center;
+    align-items: center;
+  }
+  .btn{
+    display: none;
+  }
+  .button{
+    display: flex;
+    background: #FF885B !important;
+    border: none !important;
+    width: 150px;
+    height: 70px;
+  }
+}
 `
 
 export default Testimonials;

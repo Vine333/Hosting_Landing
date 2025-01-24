@@ -15,9 +15,9 @@ const AppLayout = ({children}) => {
 
             <Header/>
 
-            <Content style={{
+            <Content >
 
-            }}>
+
                 {children}
             </Content>
             <Footer/>

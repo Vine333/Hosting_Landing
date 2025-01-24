@@ -23,8 +23,13 @@ import ICPhone from "./ICPhone.jsx";
 import ICTime from "./ICTime.jsx";
 import ICLanguage from "./ICLanguage.jsx";
 import ICMenu from "./ICMenu.jsx";
+import ICAttention from "./ICAttention.jsx";
+import ICMenuDropdown from "./ICMenuDropdown.jsx";
+
 
 export{
+    ICMenuDropdown,
+    ICAttention,
     ICMenu,
     ICLanguage,
 ICTime,

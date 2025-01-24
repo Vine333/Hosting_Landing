@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from "../common/Button.jsx";
+import {Button} from "antd";
 
 import {ICCheckMark} from "../../icons/index.js";
 import StartImg from "../../assets/svg/StartImg.jsx";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const GetStarted = () => {
-    const {__i}=useLanguage()
+    const {__i} = useLanguage()
     return (<Wrapper>
         <div className='container'>
             <div className='title'>
@@ -90,7 +90,6 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-
     gap: 30px;
 
     h2 {
@@ -112,7 +111,7 @@ const Wrapper = styled.div`
     position: relative;
     height: 100%;
     background-color: rgba(59, 58, 58, 0.2);
-    
+
     left: 20px;
 
   }
@@ -146,82 +145,99 @@ const Wrapper = styled.div`
     margin-top: 20px;
 
     .btnStart {
-
+      color: #FFFFFF !important;
       background-color: #FF885B;
       border: none;
       width: 150px;
       height: 70px;
-    }
+      font-size: 15px;
+      font-weight: 500;
 
-    .btnHost {
-      width: 150px;
-      height: 70px;
-    }
-  }
-
-  @media (max-width: 764px) {
-    .container {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-   
-  }
-  @media (max-width: 1107px ) {
-    .container {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .title {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
+      &:hover {
+        scale: 105%;
       }
     }
-    .img{
-      width: 50%;
+  }
+
+  .btnHost {
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #FF885B;
+    border-radius: 7px;
+    color: #FFFFFF !important;
+    background-color: transparent !important;
+    width: 150px;
+    height: 70px;
+
+    &:hover {
+      scale: 105%;
     }
-    svg{
-      width: 500px;
+  }
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):active {
+  background: #FF885B !important;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+  border: 1px solid #FF885B;
+
+}
+
+
+
+
+
+@media (max-width: 1107px ) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
     }
   }
   
-  @media(max-width: 1024px)
-  {
-  svg{
-    width: 450px;
-  }  
-  } 
-  @media (max-width: 1000px) {
-  svg{
-    width: 350px;
-    padding: 20px;
-  }
-  }
-  @media(max-width: 712px){
-    svg{
-   display: none;
-    }
-    .card
-    {
-      display: none;
-    }
-  }
-  @media(max-width: 425px){
-    .title {
 
-      h2 {
-        font-size:30px ;
-      }
+}
+
+@media (max-width: 1171px) {
+  .img {
+    display: none;
+  }
+  .title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .descriptions {
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+
+    h2 {
+      font-size: 30px;
+    }
   }
 `
 

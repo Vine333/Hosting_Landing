@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {ICCheckMark, ICElementor, ICGit, ICLaravel, ICWord} from "../../icons/index.js";
-import Button from "../common/Button.jsx";
+import {Button} from "antd";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
@@ -158,13 +158,32 @@ const Wrapper = styled.div`
   }
 
   .btn {
+    font-weight: 500;
+    font-size: 15px;
     margin-top: 20px;
     background-color: #FF885B;
     border: none;
     width: 150px;
     height: 70px;
+    color: #FFFFFF !important;
+    &:hover{
+      scale: 105%;
+      
+    }
   }
-
+  :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):active{
+    border: #FF885B;
+    background: #FF885B;
+  }
+  @media(max-width: 1024px){
+    .descriptions {
+      justify-content: center;
+      align-items: center;
+      .item{
+        
+      }
+    }
+  }
   @media (max-width: 946px) {
     .container {
       flex-direction: column;
@@ -175,6 +194,9 @@ const Wrapper = styled.div`
       align-items: center;
       text-align: center;
       order: 1;
+      .item{
+        font-size: 15px;
+      }
     }
 
     .label {

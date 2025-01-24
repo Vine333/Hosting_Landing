@@ -2,18 +2,17 @@ import React, {useState,} from 'react';
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
 import {ICDaily, ICLanguage, ICMenu} from "../../icons/index.js";
-import Button from "../common/Button.jsx";
-import {Drawer,Space, Switch} from "antd";
+import {Button} from "antd";
+import {Drawer, Space, Switch} from "antd";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const Header = () => {
-const navigate = useNavigate();
-const {language,changeLanguage,__i}=useLanguage()
+    const navigate = useNavigate();
+    const {language, changeLanguage, __i} = useLanguage()
 
     const [isOpen, setIsOpen] = useState(false);
     const [isOpens, setIsOpens] = useState(false);
-
     const [open, setOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -45,19 +44,18 @@ const {language,changeLanguage,__i}=useLanguage()
     // };
 
 
-    const NavigateToLogin = () =>{
+    const NavigateToLogin = () => {
         navigate('/login')
     }
-    const NavigateHome=()=>{
+    const NavigateHome = () => {
         navigate('/')
     }
 
-    return (
-        <Wrapper>
+    return (<Wrapper>
 
         <div className='container'>
 
-            <div className='logo'  onClick={NavigateHome}>
+            <div className='logo' onClick={NavigateHome}>
                 Host Beta
 
             </div>
@@ -76,33 +74,32 @@ const {language,changeLanguage,__i}=useLanguage()
 
                         <div
                             className='account'
-                            onClick={toggleDropdown} >
+                            onClick={toggleDropdown}>
                             <ICDaily width={40} height={40}/>
                         </div>
 
                     </div>
-                    {isOpen && (
-                        <div
-                            className="openAccount"
-                        >
-                            <Button style={{margin:'5px'}} onClick={()=> NavigateToLogin()}>
-                                {__i("Sign In")}
-                            </Button>
-                           <Button style={{margin:'5px',padding:'3px'}} onClick={()=> NavigateToLogin()}>
-                               {__i("Sign Up")}
-                            </Button>
-                        </div>
-                    )}
+                    {isOpen && (<div
+                        className="openAccount"
+                    >
+                        <Button className="signIn" style={{margin: '5px'}} onClick={() => NavigateToLogin()}>
+                            {__i("Sign In")}
+                        </Button>
+                        <Button className='signUp' style={{margin: '5px', padding: '3px'}}
+                                onClick={() => NavigateToLogin()}>
+                            {__i("Sign Up")}
+                        </Button>
+                    </div>)}
                 </div>
                 <div className='iconsHeaderGlobal'>
-                    <div style={{ position: 'relative', display: 'inline-block' }}>
+                    <div style={{position: 'relative', display: 'inline-block'}}>
                         <button
                             onClick={toggleDropdownLanguage}
                             style={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'space-between',
-                                gap:'10px',
+                                gap: '10px',
                                 backgroundColor: 'transparent',
                                 border: '1px solid #ddd',
                                 borderRadius: '20px',
@@ -113,7 +110,7 @@ const {language,changeLanguage,__i}=useLanguage()
                             }}
                         >
 
-                           <ICLanguage style={{marginRight:'15px'}} />
+                            <ICLanguage style={{marginRight: '15px'}}/>
                             {language}
 
                             <svg
@@ -122,7 +119,7 @@ const {language,changeLanguage,__i}=useLanguage()
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                style={{ marginLeft: '5px' }}
+                                style={{marginLeft: '5px'}}
                             >
                                 <path
                                     d="M12 15l-5-5h10l-5 5Z"
@@ -132,101 +129,98 @@ const {language,changeLanguage,__i}=useLanguage()
                         </button>
 
 
-                        {isOpens && (
-                            <div
+                        {isOpens && (<div
+                            style={{
+                                position: 'absolute',
+                                top: '40px',
+                                right: 0,
+                                backgroundColor: '#1e1e2e',
+                                border: '1px solid #ddd',
+                                borderRadius: '8px',
+                                padding: '10px',
+                                zIndex: 1000,
+                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            }}
+                        >
+                            <button
                                 style={{
-                                    position: 'absolute',
-                                    top: '40px',
-                                    right: 0,
-                                    backgroundColor: '#1e1e2e',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    padding: '10px',
-                                    zIndex: 1000,
-                                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                    display: 'block',
+                                    width: '100%',
+                                    padding: '5px',
+                                    marginBottom: '5px',
+                                    backgroundColor: 'transparent',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    textAlign: 'left',
+                                    color: '#ffffff',
                                 }}
-                            >
-                                <button
-                                    style={{
-                                        display: 'block',
-                                        width: '100%',
-                                        padding: '5px',
-                                        marginBottom: '5px',
-                                        backgroundColor: 'transparent',
-                                        border: 'none',
-                                        cursor: 'pointer',
-                                        textAlign: 'left',
-                                        color: '#ffffff',
-                                    }}
-                                    onClick={() => changeLanguage('EN')}
+                                onClick={() => changeLanguage('EN')}
 
-                                >
-                                    English
-                                </button>
-                                <button
-                                    style={{
-                                        display: 'block',
-                                        width: '100%',
-                                        padding: '5px',
-                                        backgroundColor: 'transparent',
-                                        border: 'none',
-                                        cursor: 'pointer',
-                                        textAlign: 'left',
-                                        color: '#ffffff',
-                                    }}
-                                    onClick={() => changeLanguage('RU')}
-                                >
-                                    Русский
-                                </button>
-                            </div>
-                        )}
+                            >
+                                English
+                            </button>
+                            <button
+                                style={{
+                                    display: 'block',
+                                    width: '100%',
+                                    padding: '5px',
+                                    backgroundColor: 'transparent',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    textAlign: 'left',
+                                    color: '#ffffff',
+                                }}
+                                onClick={() => changeLanguage('RU')}
+                            >
+                                Русский
+                            </button>
+                        </div>)}
                     </div>
                 </div>
 
             </div>
             <div>
-                <div onClick={()=>showDrawer()} className='btnMenu'>
-                    <ICMenu />
+                <div onClick={() => showDrawer()} className='btnMenu'>
+                    <ICMenu/>
                 </div>
 
                 <Drawer title={
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <ICDaily width={40} height={40} color={'#000000'} style={{ fontSize: '24px', color: '#000000' }} />
-                    <div>
-                    <button
-                    onClick={() => NavigateToLogin()}
-                    style={{
-                    background: 'none',
-                    border: 'none',
-                    color: '#FF885B',
-                    cursor: 'pointer',
-                    marginRight: '10px',
-                }}
-                    >
-                        {__i("Sign In")}
-                    </button>
+                    <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                        <ICDaily width={40} height={40} color={'#000000'}
+                                 style={{fontSize: '24px', color: '#000000'}}/>
+                        <div>
+                            <button
+                                onClick={() => NavigateToLogin()}
+                                style={{
+                                    background: 'none',
+                                    border: 'none',
+                                    color: '#FF885B',
+                                    cursor: 'pointer',
+                                    marginRight: '10px',
+                                }}
+                            >
+                                {__i("Sign In")}
+                            </button>
 
-                    </div>
-                    </div>
-                } onClose={onClose} open={open} classNames='drawerCustom' extra={
-                    <Space direction="vertical">
-                        <Switch
-                            checked={language === 'RU'}
-                            onChange={(checked) => changeLanguage(checked ? 'RU' : 'EN')}
-                            checkedChildren="RU"
-                            unCheckedChildren="EN"
-                        />
-                    </Space>
-                } >
-                    <div style={{color: "#000000",
+                        </div>
+                    </div>} onClose={onClose} open={open} classNames='drawerCustom' extra={<Space direction="vertical">
+                    <Switch
+                        checked={language === 'RU'}
+                        onChange={(checked) => changeLanguage(checked ? 'RU' : 'EN')}
+                        checkedChildren="RU"
+                        unCheckedChildren="EN"
+                    />
+                </Space>}>
+                    <div style={{
+                        color: "#000000",
                         margin: "0",
                         padding: "10px 20px",
                         borderRadius: "8px",
                         transition: "background-color 0.3s, color 0.3s",
                         cursor: "pointer",
                     }}>
-                        <p onClick={()=>NavigateHome()}>{__i("Home")}</p>
+                        <p onClick={() => NavigateHome()}>{__i("Home")}</p>
                         <p>{__i("About")} </p>
                         <p>{__i("Service")}</p>
                         <p> {__i("Prising")}</p>
@@ -243,28 +237,29 @@ const {language,changeLanguage,__i}=useLanguage()
 };
 
 const Wrapper = styled.div`
+  
   width: 100%;
   box-sizing: border-box;
 
-    .drawerCustom p{
-        color: white;
-        margin: 0;
-        padding: 10px 20px;
-        border-radius: 8px;
-        transition: background-color 0.3s, color 0.3s;
-      }
+  .drawerCustom p {
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-      .drawerCustom p:hover {
-        color: #FF885B;
-        background-color: #444;
-        cursor: pointer;
-      }
-    
+  .drawerCustom p:hover {
+    color: #FF885B;
+    background-color: #444;
+    cursor: pointer;
+  }
+
   .iconsHeader {
     display: flex;
     align-items: center;
     flex-direction: row;
- position: absolute;
+    position: absolute;
     right: 0;
 
   }
@@ -283,11 +278,23 @@ const Wrapper = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+  .signIn {
+    background: transparent !important;
+    border: 1px solid #FF885B !important;
+    color: #FFFFFF;
+  }
+
+  .signUp {
+    color: #FFFFFF;
+    background: transparent !important;
+    border: 1px solid #FF885B !important;
+  }
+
+ 
+
   
 
   .account {
-
-
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
@@ -317,6 +324,7 @@ const Wrapper = styled.div`
     box-sizing: border-box;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 30px 100px 30px 100px;
@@ -346,47 +354,47 @@ const Wrapper = styled.div`
         color: #FF885B;
       }
     }
-
   }
+ 
+    @media (max-width: 820px) {
+
+      .logo {
+
+        flex: 1 1 50%;
+        flex-wrap: nowrap;
+      }
+
+      .btnMenu {
+        display: block;
+        cursor: pointer;
+      }
+
+      .iconsHeader {
+        display: none;
+      }
 
 
-  @media (max-width: 820px) {
-    .logo {
+      .links {
+        display: none;
+      }
 
-      flex: 1 1 50%;
-      flex-wrap: nowrap;
+      transition: all 0.5ms;
+
+    }
+    @media (max-width: 820px) {
+      .links {
+        display: none;
+      }
+
     }
 
-    .btnMenu {
-      display: block;
-      cursor: pointer;
+
+    @media (max-width: 425px) {
+      .container {
+        padding: 15px;
+      }
     }
 
-    .iconsHeader {
-      display: none;
-    }
-
-
-    .links {
-      display: none;
-    }
-
-    transition: all 0.5ms;
-
-
-  }
-  @media(max-width: 320px){
-  .container{
-    padding: 15px;
-  }
-}
-  @media(max-width: 375px){
-    .container{
-      padding: 15px;
-    }}
-  @media(max-width: 425px){
-    .container{
-      padding: 15px;
-    }}
+   
 `
 export default Header;

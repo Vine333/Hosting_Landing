@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from "../common/Button.jsx";
+import {Button} from "antd";
 import {AboutImg} from "../../assets/svg/index.js";
 import {ICDaily, ICStorage} from "../../icons/index.js";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const AboutHostBeta = () => {
 
-    const {__i,language}=useLanguage()
-    const gapValue = language === 'RU' ? '30px' : '70px';
+    const {__i }=useLanguage()
+
     return (
         <Wrapper>
             <div className='container'>
@@ -35,12 +35,12 @@ const AboutHostBeta = () => {
                             <div><a href="">{__i('Faster Process')}</a></div>
                             <div><a href="">{__i('Faster Access')}</a></div>
                         </div>
-                        <div className='column2' style={{gap:gapValue}}>
+                        <div className='column2'>
                             <div><a href="">{__i("Faster Delivery")}</a></div>
                             <div><a href="">{__i('24/7 Full Support')}</a></div>
                         </div>
                     </div>
-                    <Button className='btnDigital'>
+                    <Button defaultHoverBg={"#FF885B"} className='btnDigital'>
                         {__i("Discover More")}
                     </Button>
                 </div>
@@ -113,8 +113,27 @@ const Wrapper = styled.div`
     border: none;
     width: 150px;
     height: 70px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
   }
-
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+    border: 1px solid #FF885B;
+    color: #ffffff;
+    scale: 105%;
+    transition: 0.2s;
+  }
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):active{
+  background-color: #FF885B;
+    color: #FFFFFF;
+  }
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):active, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):active{
+    outline: none;
+  }
+}
+.ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+  background-color: #FF885B;
+}
   .perfectDigital {
     display: flex;
     flex-direction: column;
@@ -169,7 +188,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding-right: 10px;
     font-size: 25px;
-    
+    gap: 70px;
 
     a {
       color: #FF885B;
@@ -224,7 +243,7 @@ const Wrapper = styled.div`
     .column1 {
       align-items: center;
       justify-content: center;
-
+  
       order: 1;
     }
 
@@ -252,6 +271,18 @@ const Wrapper = styled.div`
         margin: 0;
 
       }
+    }
+    .column1{
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+    .column{
+      gap: 12px;
+    }
+    .column2{
+      gap: 10px;
     }
 `
 export default AboutHostBeta;

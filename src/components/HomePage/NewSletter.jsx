@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import Button from "../common/Button.jsx";
+import {Button}from "antd";
 import {Circle, Pizza} from "../../assets/svg/Index.js";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 
@@ -57,13 +57,26 @@ const Wrapper = styled.div`
   }
 
   .btn {
+    font-size: 15px;
+    font-weight: 500;
     background-color: black;
     border: none;
     width: 150px;
     height: 70px;
     border-radius: 0;
+    color: #FFFFFF !important;
+    &:hover{
+      scale: 105%;
+    }
   }
-
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+    background: black !important;
+   
+    
+  }
+  .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, .ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover{
+    border: none;
+  }
   .input {
     display: flex;
     justify-content: center;

@@ -12,9 +12,11 @@ import GetStarted from "../../components/HomePage/GetStarted.jsx";
 import NewSletter from "../../components/HomePage/NewSletter.jsx";
 
 
+
 const HomePage = () => {
     return (<AppLayout>
         <Wrapper>
+
             <WelcomeToHostBeta/>
             <TrustedBySection/>
             <AboutHostBeta/>

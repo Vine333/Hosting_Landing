@@ -111,8 +111,8 @@ const Wrapper = styled.div`
     margin-top: 20px;
     background-color: #FF885B;
     border: none;
-    width: 150px;
-    height: 70px;
+    width: 190px;
+    height: 50px;
     color: #ffffff;
     font-size: 15px;
     font-weight: 500;
@@ -138,12 +138,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     text-align: start;
-    padding-right: 100px;
+    padding-right: 70px;
     align-self: flex-start;
-    padding-top: 50px;
+    padding-top: 100px;
     gap: 30px;
     padding-left: 50px;
     width: 50%;
+    
 
     h1 {
       font-size: 40px;
@@ -154,7 +155,7 @@ const Wrapper = styled.div`
     p {
       font-size: 20px;
       color: rgba(211, 211, 211, 0.39);
-      margin: 0 0 60px 0;
+      margin: 0  ;
 
     }
 
@@ -166,16 +167,16 @@ const Wrapper = styled.div`
 
   .column {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: start;
     text-align: left;
-    gap: 50px;
+    gap: 40px;
   }
 
   .column1 {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 40px;
     font-size: 25px;
 
     a {
@@ -188,7 +189,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding-right: 10px;
     font-size: 25px;
-    gap: 70px;
+    gap: 40px;
 
     a {
       color: #FF885B;

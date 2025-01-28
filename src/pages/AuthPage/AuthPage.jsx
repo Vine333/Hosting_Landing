@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import AppLayout from "../../layouts/index.jsx";
-import Button from "/src/components/common/Button.jsx";
 import {useLanguage} from "../../hooks/useTranslate.jsx";
 import {useNavigate} from "react-router-dom";
-import Header from "../../components/Header/Header.jsx";
+import { Button, Input } from 'antd';
+import {EyeTwoTone,EyeInvisibleOutlined,UserOutlined} from "@ant-design/icons";
 
 
 const AuthPage = () => {
@@ -18,23 +18,26 @@ const AuthPage = () => {
 
 
         <Container>
-                <h5 >
-                    {__i(" Username")}
-                </h5>
-            <input placeholder={__i("Email or Phone")} type='email'/>
+            <h1>{__i( "Login to You Account")}</h1>
 
-            <h5>
-                {__i('Password')}
-            </h5>
-            <input placeholder={__i('Password')}  type='password'/>
+            <Input placeholder={__i("Email")} prefix={<UserOutlined />}  className='email'/>
 
-            <p><a href="src/pages/AuthPage/AuthPage.jsx">{__i("Forgot Password?")}</a></p>
+
+                <Input.Password
+                    rootClassName='password'
+                    style={{width:"300px",height:"37px",background:" #ecf5f2",color:"#757575"}}
+                    className='password'
+                    placeholder={__i("Password")}
+                    iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                />
+
+            <p><a href="/">{__i("Forgot Password?")}</a></p>
 
             <div className='btnAuth'>
 
-                <Button onClick={()=>NavigateToAccount()}> {__i("Sign In")}</Button>
+                <Button onClick={()=>NavigateToAccount()} className='btn'> {__i("Sign In")}</Button>
 
-                <Button style={{padding:"3px"}}> {__i("Sign Up")} </Button>
+                <a style={{padding:"3px"}}> {__i("Sign Up")} </a>
 
             </div>
 
@@ -53,24 +56,69 @@ display: flex;
   max-width: 600px;
   flex-direction: column;
   width: 100%;
-  h5{
-    text-align: left;
-    color: #ffffff;
-    font-size: 24px;
-    display: flex;
-   width: 300px;
-    align-items: flex-start;
-    margin: 0 auto;
+h1{
+  color: #FFFFFF;
+  font-size: 30px;
+}
+  a{
+    color: #FFFFFF;
+    text-decoration: underline;
   }
   input{
     width: 300px;
     padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #FF885B;
+    border-radius: 7px;
+    border: 1px solid #1A1A19;
+    background: #ecf5f2;
+    box-shadow: 0 0 92px -13px rgba(255,255,255,0.3)
   }
   .btnAuth{
     display: flex;
     gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a{
+      color: #FFFFFF;
+      
+      text-decoration: underline;
+    }
+  }
+  .password{
+  border-radius: 7px;
+    &:hover{
+      border: 1px solid #FF885B !important;
+    }  
+    &:active{
+         border: 1px solid #FF885B !important;
+       }
+    &:focus{
+      border-color: #FF885B !important;
+    }
+  }
+  .email{
+    margin-bottom: 20px;
+    height: 37px;
+    width: 300px;
+    border-radius: 7px;
+    &:hover{
+      border: 1px solid #FF885B;
+    }
+  }
+  .btn{
+    width: 190px;
+    height: 50px;
+    background: #FF885B;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 15px;
+    
+    &:hover{
+      color: #FFFFFF !important;
+      scale: 105%;
+      background: #FF885B !important;
+    }
   }
 `
 

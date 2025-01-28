@@ -43,6 +43,7 @@ const Wrapper = styled.div`
   .brands {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     img {
       margin: 20px;

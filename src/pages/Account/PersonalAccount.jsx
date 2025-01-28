@@ -2,27 +2,33 @@ import React, { useState } from 'react';
 import AppLayout from "../../layouts/index.jsx";
 import styled from "styled-components";
 import {Menu} from 'antd';
+import MyServersMenu from "../../components/MyServers/PersonalInfo.jsx";
+import SupportQuestion from "../../components/Support/SupportQuestion.jsx";
+import MyAccount from "../../components/MyAccount/MyAccount.jsx";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-import MyServersMenu from "../../components/common/PersonalInfo.jsx";
-import SupportQuestion from "../../components/common/SupportQuestion";
-import MyAccount from "../../components/common/MyAccount.jsx";
 
 
+
+
+const PersonalAccount = () => {
+const {__i}=useLanguage();
 const items = [
     {
         key: '1',
-        label: 'Мой Аккаунт',
+        label: __i('MyAccount'),
     },
     {
         key: '2',
-        label: 'Мои Сервера',
+        label: __i('My Servers'),
     },
     {
         key: '3',
-        label:   'Поддержка',
+        label:   __i("Support"),
 
     },
 ];
+
 
 const getLevelKeys = (items1) => {
     const key = {};
@@ -42,7 +48,7 @@ const getLevelKeys = (items1) => {
 
 const levelKeys = getLevelKeys(items);
 
-const PersonalAccount = () => {
+
     const [selectedKey, setSelectedKey] = useState('1');
     const [stateOpenKeys, setStateOpenKeys] = useState(['2']);
     const onOpenChange = (openKeys) => {

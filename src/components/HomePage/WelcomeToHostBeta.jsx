@@ -7,7 +7,7 @@ import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 
 const WelcomeToHostBeta = () => {
-    const {__i}=useLanguage()
+    const {__i} = useLanguage()
     return (<Wrapper>
         <div className='containerSmartCompany'>
             <div className='descriptionSmart'>
@@ -56,6 +56,7 @@ const WelcomeToHostBeta = () => {
 
                         <p>Lorem ipsum dolor sit amet, consectetur.</p>
                     </div>
+                    <div className="divider"></div>
                     <div>
                         <div style={{display: "flex"}}>
                             <ICSupport/>
@@ -111,18 +112,27 @@ const Wrapper = styled.div`
     h1 {
       font-size: 50px;
       font-style: italic;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 350;
     }
   }
+
   .btnHosting {
     font-size: 15px;
     font-weight: 500;
-    width: 150px;
-    height: 44px; 
-    background-color:transparent ;
+    width: 190px;
+    height: 50px;
+    background-color: transparent;
     border: 1px solid #FF885B;
     color: #ffffff;
     border-radius: 7px;
-    }
+  }
+
   .ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover, :where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed:not(:disabled):not(.ant-btn-disabled):hover {
     border: 1px solid #FF885B;
     color: #ffffff;
@@ -130,20 +140,19 @@ const Wrapper = styled.div`
     transition: 0.2s;
     background: none;
   }
+
   .btnStart {
     margin-right: 10px;
     background-color: #FF885B;
-
-
     font-size: 15px;
     font-weight: 500;
-    width: 150px;
-    height: 44px;
-
+    width: 190px;
+    height: 50px;
     border: 1px solid #FF885B;
     color: #ffffff;
     border-radius: 7px;
-    &:hover{
+
+    &:hover {
       background: #FF885B !important;
     }
   }
@@ -166,11 +175,12 @@ const Wrapper = styled.div`
       margin-top: 15px;
       font-size: 40px;
       font-weight: 350;
+      margin-bottom: 0;
     }
 
     p {
       font-size: 20px;
-
+      margin-top: 0;
       padding-right: 25px;
       font-style: italic;
       color: #FF885B;
@@ -182,9 +192,11 @@ const Wrapper = styled.div`
       margin-top: 15px;
       font-size: 40px;
       font-weight: 350;
+      margin-bottom: 0;
     }
 
     p {
+      margin-top: 0;
       font-size: 20px;
       color: #FF885B;
       font-style: italic;
@@ -193,11 +205,13 @@ const Wrapper = styled.div`
 
   .wifi {
     position: absolute;
+    height: 135px;
     bottom: 0;
     right: 334px;
     background-color: #FF885B;
     padding: 20px;
-
+    box-shadow: 0px 0px 92px -13px rgba(0, 0, 0, 0.18);
+    z-index: 0;
   }
 
   .def {
@@ -206,6 +220,8 @@ const Wrapper = styled.div`
     right: 50px;
     background-color: #FF885B;
     padding: 16px;
+    box-shadow: 0px 0px 92px -13px rgba(0, 0, 0, 0.18);
+    z-index: 2;
   }
 
   @media (max-width: 1200px) {
@@ -391,6 +407,16 @@ const Wrapper = styled.div`
           font-style: italic;
         }
       }
+    }
+  }
+  @media(max-width: 320px){
+    .btnStart{
+      height: 50px;
+      width: 150px;
+    }
+    .btnHosting{
+      height: 50px;
+      width: 150px;
     }
   }
 `

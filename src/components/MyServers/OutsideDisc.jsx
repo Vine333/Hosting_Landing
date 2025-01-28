@@ -1,21 +1,22 @@
 import React, {Component} from 'react';
 import {Button} from "antd";
 import styled from "styled-components";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-class OutsideDisc extends Component {
-    render() {
+const OutsideDisc = ()=>  {
+const {__i}=useLanguage()
         return (
             <Container>
-                <input type="text" className='search' placeholder='Search all'>
+                <input type="text" className='search' placeholder={__i('Search')}>
                 </input>
 
-                <Button>
-                    + Create Outside Disc
+                <Button className='btn'>
+                    + {__i("Create Outside Disc")}
                 </Button>
             </Container>
         );
-    }
-}
+
+};
 const Container = styled.div`
   @media(max-width: 768px){
     flex-direction: column;
@@ -24,7 +25,7 @@ const Container = styled.div`
     align-items: center;
   }
   .search{
-    width: 100%;
+    width: 95%;
     height: 20px;
     border-radius: 2px;
     padding: 20px;
@@ -35,7 +36,7 @@ const Container = styled.div`
   .ant-btn{
     font-size: 15px;
     font-weight: 500;
-    width: 170px;
+    width: 185px;
     height: 60px;
     background-color: transparent;
     border: 1px solid #FF885B;

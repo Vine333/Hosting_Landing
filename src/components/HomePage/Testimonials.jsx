@@ -131,8 +131,8 @@ const Wrapper = styled.div`
     margin-top: 20px;
     background-color: #FF885B;
     border: none;
-    width: 150px;
-    height: 70px;
+    width: 190px;
+    height: 50px;
     color: #FFFFFF !important;
 
     &:hover {
@@ -145,7 +145,7 @@ const Wrapper = styled.div`
     font-size: 15px;
     display: none;
     color: #FFFFFF !important;
-
+    
     &:hover {
       scale: 105%;
     }
@@ -295,8 +295,8 @@ const Wrapper = styled.div`
     display: flex;
     background: #FF885B !important;
     border: none !important;
-    width: 150px;
-    height: 70px;
+    width: 190px;
+    height: 50px;
   }
 }
 `

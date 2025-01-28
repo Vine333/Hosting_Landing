@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     font-weight: 500;
     background-color: black;
     border: none;
-    width: 150px;
+    width: 190px;
     height: 70px;
     border-radius: 0;
     color: #FFFFFF !important;

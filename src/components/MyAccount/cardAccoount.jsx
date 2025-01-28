@@ -2,70 +2,76 @@ import React from 'react';
 import {Button, Card, Col, Row} from 'antd';
 import styled from "styled-components";
 import {ICAttention} from "../../icons/index.js";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-const CardAccount = () => (
-    <Container>
-        <Row gutter={[16, 16]}>
+const CardAccount = () => {
+    const {__i}=useLanguage()
 
-            <Col xs={24} sm={24} md={12}>
-                <Card title="Аккаунт " bordered={false}>
-                    аккаунт
-                </Card>
-            </Col>
-            <Col xs={24} sm={24} md={12}>
-                <Card title="Создано" bordered={false}>
-                   15.01.2020
-                </Card>
-            </Col>
+    return(
+            <Container>
+                <Row gutter={[16, 16]}>
 
-
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Баланс" bordered={false}>
-                    0.00usd
-                </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Средства на бонусном счете" bordered={false}>
-                    0.00usd
-                </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Средства на партнерском счете" bordered={false}>
-                    0.00usd
-                </Card>
-            </Col>
+                    <Col xs={24} sm={24} md={12}>
+                        <Card title={__i('Account')} bordered={false}>
+                            аккаунт
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={24} md={12}>
+                        <Card title={__i('Create')} bordered={false}>
+                            15.01.2020
+                        </Card>
+                    </Col>
 
 
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Заказ новых услуг" bordered={false}>
-                    да
-                </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Создание новых пользователей " bordered={false}>
-                   да
-                </Card>
-            </Col>
-            <Col xs={24} sm={12} md={8}>
-                <Card title="Вывод средств из партнёрки" bordered={false}>
-                   да
-                </Card>
-            </Col>
-        </Row>
-        <div>
-            <h1>Удаление Аккаунта</h1>
-            <p>Чтобы удалить аккаунт,предварительно необходимо удалить все услуги и всех остальных пользователей аккаунта</p>
-            <Button>
-                <ICAttention/> Удалить Аккаунт
-            </Button>
-        </div>
-    </Container>
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i('Balance')} bordered={false}>
+                            0.00$
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i("Funds in the bonus account")} bordered={false}>
+                            0.00$
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i("Funds in partner account")} bordered={false}>
+                            0.00$
+                        </Card>
+                    </Col>
+
+
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i("Ordering new services")} bordered={false}>
+                            да
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i("Creating new users")} bordered={false}>
+                            да
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={12} md={8}>
+                        <Card title={__i( "Withdrawing funds from an affiliate program")} bordered={false}>
+                            да
+                        </Card>
+                    </Col>
+                </Row>
+                <div className='delete'>
+                    <h1>{__i("Delete Account")}</h1>
+                    <p>{__i("To delete an account, you must first delete all services and all other users of the account.")}</p>
+                    <Button className='btn'>
+                        <ICAttention/> {__i('Delete Account')}
+                    </Button>
+                </div>
+            </Container>
+
+
 );
-
+}
 const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 11px;
 
   .ant-btn {
     font-size: 15px;
@@ -85,6 +91,18 @@ const Container = styled.div`
     scale: 105%;
     transition: 0.2s;
     background-color: #ff0000;
+  }
+  .delete{
+    h1{
+      margin-bottom: 0;
+    }
+    p{
+      margin-top: 2px;
+    }
+  }
+  .btn{
+    width: 200px;
+    
   }
 `;
 

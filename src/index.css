@@ -1,4 +1,50 @@
+.divider{
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.18);
+    margin: 10px 0;
+    position: relative;
+    z-index: 10;
+}
+.menuDrop ul {
+    background: #1e1e2e !important;
+}
 
+.menuDrop button {
+    width: 88px;
+    background: transparent;
+    border: 1px solid #FF885B;
+    color: #FFFFFF;
+}
+
+.menuDrop button:hover {
+    color: #FFFFFF !important;
+    background: transparent !important;
+    border: 1px solid #FF885B !important;
+    scale: 105%;
+}
+
+.menuDrop button:active {
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF;
+    background: #FF885B;
+}
+
+.changer {
+    color: #1A1A19 !important;
+}
+
+.changer a {
+    color: #1A1A19;
+}
+
+.changer a:active {
+    color: #FF885B;
+}
+
+.changer .active-lang {
+    color: #FF885B;
+}
 body {
     width: 100%;
     margin: 0;

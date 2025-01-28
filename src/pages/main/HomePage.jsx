@@ -5,10 +5,10 @@ import WelcomeToHostBeta from "../../components/HomePage/WelcomeToHostBeta.jsx";
 import TrustedBySection from "../../components/HomePage/TrustedBySection.jsx";
 import AboutHostBeta from "../../components/HomePage/AboutHostBeta.jsx";
 import OurService from "../../components/HomePage/OurService.jsx";
-import OurCapabilities from "../../components/HomePage/OurCapabilities.jsx";
+import OurCapabilities from "../../components/HomePage/OurCapabilities/OurCapabilities.jsx";
 import ServersWorldWide from "../../components/HomePage/ServersWorldWide.jsx";
 import Testimonials from "../../components/HomePage/Testimonials.jsx";
-import GetStarted from "../../components/HomePage/GetStarted.jsx";
+import GetStarted from "../../components/HomePage/GetStart/GetStarted.jsx";
 import NewSletter from "../../components/HomePage/NewSletter.jsx";
 
 

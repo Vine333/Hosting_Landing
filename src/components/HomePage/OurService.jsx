@@ -108,7 +108,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: left;
     align-items: flex-start;
-    padding: 25px;
+    padding: 40px 25px 0 25px;
 
     h3 {
       color: white;
@@ -118,9 +118,11 @@ const Wrapper = styled.div`
     p {
       color: white;
       font-size: 15px;
+      margin: 0;
     }
 
   }
+ 
   @media(max-width: 945px){
     .line1{
       width: 100%;
@@ -139,13 +141,14 @@ const Wrapper = styled.div`
 
     .card{
       
-         
+         padding: 0;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 15px;
       p{
           margin: 0;
+        text-align: center;
       }
       h3{
        margin: 0;
@@ -200,14 +203,12 @@ const Wrapper = styled.div`
   }
   @media(max-width: 722px){
     .card{
-      gap: 30px;
       flex-direction: column;
-      
       justify-content: center;
       align-items: center;
       text-align: center;
       p{
-        font-size: 10px;
+        font-size: 15px;
       }
       h3{
         width: 50%;

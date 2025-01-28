@@ -5,22 +5,25 @@ import styled from "styled-components";
 import ServersTabs from "./Tabs.jsx";
 import OutsideDisc from "./OutsideDisc.jsx";
 import {DownOutlined} from "@ant-design/icons";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-const items = [{
-    label: 'Серверы', key: '1',
-}, {
-    label: 'Внешние диски', key: '2',
-}, {
-    label: 'Резервные копии', key: '3',
-
-}, {
-    label: 'SSH-ключи', key: '4',
-}, {
-    label: 'ISO-образы', key: '5',
-}, {
-    label: 'Другие услуги ', key:' 6',
-},];
 const MyServersMenu = () => {
+    const {__i}=useLanguage()
+    const items = [{
+        label: __i("Servers"), key: '1',
+    }, {
+        label:__i("External drives"), key: '2',
+    }, {
+        label: __i( "Backups"), key: '3',
+
+    }, {
+        label: __i("SSH-keys"), key: '4',
+    }, {
+        label: __i("ISO images"), key: '5',
+    }, {
+        label: __i("Other services"), key: '6',
+    },];
+
     const [currentKey, setCurrentKey] = useState("1");
     const [currentLabel, setCurrentLabel] = useState("Серверы");
 
@@ -29,27 +32,26 @@ const MyServersMenu = () => {
         const selectedItem = items.find((item) => item.key === e.key);
         if (selectedItem) {
             setCurrentLabel(selectedItem.label);
-            console.log('1234')
+
         }
     };
-    const dropdownMenu = (
-        <Menu onClick={onClick} items={items} />
-    );
+    const dropdownMenu = (<Menu onClick={onClick} items={items}/>);
     const renderContent = () => {
         switch (currentKey) {
             case '1':
-                return  <ServersTabs/>;
+                return <ServersTabs/>;
             case '2':
-                return <OutsideDisc/> ;
+                return <OutsideDisc/>;
             case '3':
-                return  <div>Hello3 </div>;
+                return <div>Hello3 </div>;
             case '4':
-                return  <div>Hello4 </div>;
+                return <div>Hello4 </div>;
             case '5':
-                return  <div>Hello5 </div>;
+                return <div>Hello5 </div>;
             case '6':
-                return  <div>Hello6 </div>;
-            default: return <ServersTabs/>;
+                return <div>Hello6 </div>;
+            default:
+                return <ServersTabs/>;
         }
     };
 
@@ -58,15 +60,14 @@ const MyServersMenu = () => {
                 <Dropdown overlay={dropdownMenu} trigger={['click']} className='dropdownMenu'>
                     <Space className='containerLabel'>
                         <span> {currentLabel} </span>
-                        <DownOutlined />
+                        <DownOutlined/>
                     </Space>
                 </Dropdown>
             </div>
             <div>
                 <span className='menu'>
                      <Menu onClick={onClick} selectedKeys={[currentKey]} mode="horizontal" items={items} style={{
-                         display:"flex",
-                         gap:'10px'
+                         display: "flex", gap: '10px'
                      }}/>
                 </span>
 
@@ -76,8 +77,7 @@ const MyServersMenu = () => {
             </div>
 
 
-
-    </Container>
+        </Container>
 
 
     );
@@ -86,27 +86,34 @@ const Container = styled.div`
   .ant-menu-light {
     background-color: transparent;
   }
-  .dropdownMenu{
+
+  .dropdownMenu {
     display: none;
+    margin: 10px !important;
   }
-  .containerLabel{
+
+  .containerLabel {
     cursor: pointer;
-    span{
+
+    span {
       color: #FF885B;
     }
 
   }
-  .content{
+
+  .content {
     padding: 5px;
   }
-  @media(max-width: 768px){
-    .dropdownMenu{
+
+  @media (max-width: 768px) {
+    .dropdownMenu {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 15px;
     }
-    .menu{
+
+    .menu {
       display: none;
     }
   }

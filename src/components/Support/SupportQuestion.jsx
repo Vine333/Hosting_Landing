@@ -2,16 +2,18 @@ import React, {useState} from 'react';
 
 import {Dropdown, Menu, Space} from 'antd';
 import styled from "styled-components";
-import Questions from "./Questions.jsx";
+import Questions from "./Questions/Questions.jsx";
 import {DownOutlined} from "@ant-design/icons";
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-
-const items = [{
-    label: 'Поддержка', key: '1',
-}, {
-    label: 'Тикеты', key:'2',
-},];
 const SupportQuestions = () => {
+    const {__i}=useLanguage();
+const items = [{
+    label: __i("Support"), key: '1',
+}, {
+    label: __i("Tickets"), key:'2',
+},];
+
     const [currentKey, setCurrentKey] = useState("1");
     const [currentLabel, setCurrentLabel] = useState("Поддержка");
 
@@ -76,6 +78,7 @@ const Container = styled.div`
   }
   .dropdownMenu{
     display: none;
+    margin: 10px !important;
   }
   @media(max-width: 768px){
     .dropdownMenu{

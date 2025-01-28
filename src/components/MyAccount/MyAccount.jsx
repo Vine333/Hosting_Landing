@@ -1,27 +1,29 @@
 import React, {useState} from 'react';
 import {Menu,Dropdown,Space} from 'antd';
 import styled from "styled-components";
-import CardAccount from "../MyAccount/cardAccoount";
-import Profile from "../MyAccount/Profile.jsx";
-import History from "../MyAccount/History.jsx";
-import Log from "../MyAccount/Log.jsx";
+import CardAccount from "./cardAccoount.jsx";
+import Profile from "./Profile.jsx";
+import History from "./History.jsx";
+import Log from "./Log.jsx";
 import { DownOutlined } from "@ant-design/icons"
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
-
+const MyAccount = () => {
+    const {__i}=useLanguage()
 const items = [{
-    label: 'Общая информация', key: '1',
+    label: __i("General information"), key: '1',
 
 }, {
-    label: 'Профиль', key: '2',
+    label: __i('Profile'), key: '2',
 
 }, {
-    label: "История", key: '3',
+    label: __i('History'), key: '3',
 }, {
-    label: "Логи", key: '4',
+    label: __i('logs'), key: '4',
 },
 
 ];
-const MyAccount = () => {
+
     const [currentKey, setCurrentKey] = useState("1");
     const [currentLabel, setCurrentLabel] = useState("Общая информация");
 
@@ -51,7 +53,7 @@ const MyAccount = () => {
     };
 
     return (<Container>
-        <Dropdown overlay={dropdownMenu} trigger={['click']} className='dropdownMenu'>
+        <Dropdown overlay={dropdownMenu} trigger={['click']} className='dropdownMenu'  >
             <Space className='containerLabel'>
                <span> {currentLabel}</span>
                 <DownOutlined />
@@ -75,14 +77,18 @@ const Container = styled.div`
   }
   .dropdownMenu{
     display: none;
+    margin: 10px !important;
   }
   .containerLabel{
     cursor: pointer;
+    
     span{
+     
       color: #FF885B;
     }
     
   }
+ 
   @media(max-width: 768px){
     .dropdownMenu{
       display: flex;
@@ -93,6 +99,7 @@ const Container = styled.div`
     .menu{
       display: none;
     }
+   
   }
 `
 export default MyAccount;

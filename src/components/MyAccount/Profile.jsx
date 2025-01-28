@@ -4,8 +4,11 @@ import { UserOutlined } from '@ant-design/icons';
 import {Input, Modal, Switch,Button} from 'antd';
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
+import {useLanguage} from "../../hooks/useTranslate.jsx";
 
 const Profile = () => {
+    const {__i}=useLanguage()
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSwitchChecked, setIsSwitchChecked] = useState(false);
     const [pendingSwitchState, setPendingSwitchState] = useState(false);
@@ -25,13 +28,13 @@ const Profile = () => {
     };
     return (
         <Container>
-<h1>Настройки «Someemail@gmai.come»</h1>
+<h1>{__i("Settings")}«Someemail@gmai.come»</h1>
             <div>
                 <Input placeholder="«Someemail@gmail.com»"  disabled prefix={<UserOutlined />} className='inputEmail' />
                 <div className='passwordInput'>
-                    <Input.Password placeholder="Текущий пароль" />
+                    <Input.Password placeholder={__i("Current Password")} />
                     <Input.Password
-                        placeholder="Новый пароль"
+                        placeholder={__i("New Password")}
                         iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                     />
                 </div>
@@ -42,28 +45,28 @@ const Profile = () => {
                         checked={isSwitchChecked}
                         onChange={handleSwitchChange}
                     />
-                    <p>Двухфакторная аутентификация </p>
+                    <p>{__i("Two-factor authentication")}</p>
 
                     <Modal
-                        title="Подтверждение двухфакторной аутентификации"
+                        title={__i("Two-factor authentication confirmation")}
                         open={isModalOpen}
                         footer={[
                             <Button key="cancel" onClick={handleCancel}>
-                                Отмена
+                                {__i("Cancel")}
                             </Button>,
                             <Button key="ok" type="primary" onClick={handleOk}>
-                                Подтвердить
+                                {__i("Confirm")}
                             </Button>,
                         ]}
                     >
-                        <p>Вы уверены, что хотите изменить состояние двухфакторной аутентификации?</p>
+                        <p>{__i("Are you sure you want to change the two-factor authentication state?")}</p>
                     </Modal>
 
                 </div>
             </div>
             <div className='btn'>
                 <Button>
-                    Сохранить
+                    {__i("Save")}
                 </Button>
             </div>
 
@@ -77,12 +80,18 @@ max-width: 1440px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
+  h1{
+    font-size: 18px ;
+  }
   .inputEmail{
     background-color: transparent;
     color: #ffffff;
     width: 660px;
+    margin-bottom:5px;
     ::placeholder{
     color: #ffffff;
+      
   }
    
   }

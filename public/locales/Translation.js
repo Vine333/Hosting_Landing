@@ -107,8 +107,16 @@ export const translations = {
         "Popular questions":"Popular questions",
         "Create a support question":"Create a support question",
         "Login to You Account":"Login to You Account",
+        "Your Email":"Your Email",
+        "Your Name":"Your Name",
+        "Confirm password":"Confirm password",
+        "Registration":"Registration",
 
     }, RU: {
+        "Registration":"Регистрация",
+        "Confirm password":"Подтвердить пароль",
+        "Your Name":"Ваше Имя",
+        "Your Email":"Ваша Электронная почта",
         "Login to You Account":"Войдите в свой аккаунт",
         "Create a support question":"Создать вопрос в поддержку",
         "Popular questions":"Популярные вопросы",

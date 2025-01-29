@@ -46,6 +46,9 @@ const Header = () => {
     const NavigateHome = () => {
         navigate('/')
     }
+    const NavigateToRegister =()=>{
+        navigate('/register')
+    }
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -95,7 +98,7 @@ const Header = () => {
                             {__i("Sign In")}
                         </Button>
                         <Button className='signUp'
-                                onClick={() => NavigateToLogin()}>
+                                onClick={() => NavigateToRegister()}>
                             {__i("Sign Up")}
                         </Button>
                     </div>)}

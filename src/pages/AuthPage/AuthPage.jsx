@@ -14,6 +14,9 @@ const AuthPage = () => {
     const NavigateToAccount=()=>{
         navigate('/account')
     }
+    const NavigateRegister = ()=>{
+        navigate('/register')
+    }
     return (<AppLayout>
 
 
@@ -37,7 +40,7 @@ const AuthPage = () => {
 
                 <Button onClick={()=>NavigateToAccount()} className='btn'> {__i("Sign In")}</Button>
 
-                <a style={{padding:"3px"}}> {__i("Sign Up")} </a>
+                <a onClick={()=>NavigateRegister()} style={{padding:"3px"}}> {__i("Sign Up")} </a>
 
             </div>
 

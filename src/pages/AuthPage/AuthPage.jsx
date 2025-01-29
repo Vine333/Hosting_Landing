@@ -98,6 +98,9 @@ h1{
     &:focus{
       border-color: #FF885B !important;
     }
+    &:focus-within{
+      border-color: #FF885B !important;
+    }
   }
   .email{
     margin-bottom: 20px;
@@ -106,6 +109,12 @@ h1{
     border-radius: 7px;
     &:hover{
       border: 1px solid #FF885B;
+    }
+    span{
+    color:#FF885B !important;
+    }
+    &:focus-within{
+      border-color: #FF885B !important;
     }
   }
   .btn{

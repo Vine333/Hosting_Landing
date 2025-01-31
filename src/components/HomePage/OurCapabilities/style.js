@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 17px;
     padding-left: 100px;
 
     h3 {
@@ -47,7 +47,7 @@ export const Wrapper = styled.div`
     justify-content: left;
     align-items: flex-start;
     flex-direction: column;
-
+    gap: 10px;
     width: 60%;
 
     h1 {
@@ -57,9 +57,9 @@ export const Wrapper = styled.div`
     }
 
     p {
-      margin: 10px 0 10px;
-      font-size: 20px;
-      color: rgba(211, 211, 211, 0.39);
+      margin: 0;
+      font-size: 25px;
+      color: #d3d3d3;
     }
   }
 
@@ -76,6 +76,7 @@ export const Wrapper = styled.div`
   }
 
   .column1 {
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -85,6 +86,7 @@ export const Wrapper = styled.div`
   }
 
   .column2 {
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -96,7 +98,7 @@ export const Wrapper = styled.div`
   .btn {
     font-weight: 500;
     font-size: 15px;
-    margin-top: 20px;
+margin-top: 10px;
     background-color: #FF885B;
     border: none;
     width: 190px;

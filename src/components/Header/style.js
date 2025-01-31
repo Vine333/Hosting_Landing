@@ -47,7 +47,7 @@ export const Wrapper = styled.div`
     align-items: center;
     flex-direction: row;
     position: absolute;
-    right: 0;
+    right: 4%;
 
   }
 
@@ -55,7 +55,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 78%;
+    top: 66%;
     right: 70%;
     background-color: #1e1e2e;
     border: 1px solid #444;

@@ -11,13 +11,17 @@ const CardAccount = () => {
             <Container>
                 <Row gutter={[16, 16]}>
 
-                    <Col xs={24} sm={24} md={12}>
+                    <Col xs={24} sm={24} md={12} className='accountCard'>
+
                         <Card title={__i('Account')} bordered={false}>
+                            <div className="cardBorder"></div>
                             аккаунт
                         </Card>
                     </Col>
                     <Col xs={24} sm={24} md={12}>
-                        <Card title={__i('Create')} bordered={false}>
+
+                        <Card title={__i('Create')}  bordered={false}>
+                            <div className="cardBorder"></div>
                             15.01.2020
                         </Card>
                     </Col>
@@ -25,16 +29,19 @@ const CardAccount = () => {
 
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i('Balance')} bordered={false}>
+                            <div className="cardBorder"></div>
                             0.00$
                         </Card>
                     </Col>
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i("Funds in the bonus account")} bordered={false}>
+                            <div className="cardBorder"></div>
                             0.00$
                         </Card>
                     </Col>
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i("Funds in partner account")} bordered={false}>
+                            <div className="cardBorder"></div>
                             0.00$
                         </Card>
                     </Col>
@@ -42,16 +49,19 @@ const CardAccount = () => {
 
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i("Ordering new services")} bordered={false}>
+                            <div className="cardBorder"></div>
                             да
                         </Card>
                     </Col>
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i("Creating new users")} bordered={false}>
+                            <div className="cardBorder"></div>
                             да
                         </Card>
                     </Col>
                     <Col xs={24} sm={12} md={8}>
                         <Card title={__i( "Withdrawing funds from an affiliate program")} bordered={false}>
+                            <div className="cardBorder"></div>
                             да
                         </Card>
                     </Col>

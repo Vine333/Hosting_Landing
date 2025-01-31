@@ -9,6 +9,22 @@
 .menuDrop ul {
     background: #1e1e2e !important;
 }
+.drawer{
+    background: #1A1A19 !important;
+
+}
+.drawerHeader button{
+color: #FFFFFF;
+}
+.anticon{
+    color: #FFFFFF;
+}
+.drawer p {
+    color: #FFFFFF !important;
+}
+.drawer p:hover{
+    color: #FF885B !important;
+}
 
 .menuDrop button {
     width: 88px;
@@ -23,19 +39,35 @@
     border: 1px solid #FF885B !important;
     scale: 105%;
 }
+.cardBorder{
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.18) !important;
+    margin: 10px ;
 
+}
 .menuDrop button:active {
     color: #FFFFFF !important;
     border: 1px solid #FFFFFF;
     background: #FF885B;
 }
-
+.ant-card-head {
+    background: #3b3a3a !important;
+    color: #FFFFFF !important;
+    font-size: 30px !important;
+    z-index: 10 !important;
+    font-weight: 700 !important;
+}.ant-card-body {
+    background: #3b3a3a !important;
+    color: #FFFFFF !important;
+    font-size: 25px !important;
+}
 .changer {
-    color: #1A1A19 !important;
+    color: #ffffff!important;
 }
 
 .changer a {
-    color: #1A1A19;
+    color: #ffffff;
 }
 
 .changer a:active {

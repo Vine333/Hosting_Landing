@@ -10,7 +10,7 @@ const AboutHostBeta = () => {
     const {__i }=useLanguage()
 
     return (
-        <Wrapper>
+        <Wrapper >
             <div className='container'>
                 <div className='imgJump'>
                     <AboutImg/>
@@ -141,9 +141,10 @@ const Wrapper = styled.div`
     padding-right: 70px;
     align-self: flex-start;
     padding-top: 100px;
-    gap: 30px;
+    gap: 10px;
     padding-left: 50px;
     width: 50%;
+    margin-top: 7%;
     
 
     h1 {
@@ -154,7 +155,7 @@ const Wrapper = styled.div`
 
     p {
       font-size: 20px;
-      color: rgba(211, 211, 211, 0.39);
+      color: #d3d3d3;
       margin: 0  ;
 
     }
@@ -167,10 +168,11 @@ const Wrapper = styled.div`
 
   .column {
     display: flex;
-    justify-content: space-evenly;
+    margin-top: 10px;
     align-items: start;
     text-align: left;
     gap: 40px;
+   
   }
 
   .column1 {

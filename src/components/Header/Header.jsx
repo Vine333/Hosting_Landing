@@ -130,11 +130,11 @@ const Header = () => {
                     <ICMenu/>
                 </div>
 
-                <Drawer title={
+                <Drawer className='drawer' title={
 
-                    <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                        <ICDaily width={40} height={40} color={'#000000'}
-                                 style={{fontSize: '24px', color: '#000000'}}/>
+                    <div style={{display: 'flex', alignItems: 'center', gap: '10px'}} className='drawerHeader'>
+                        <ICDaily width={40} height={40} color={'#ffffff'}
+                                 style={{fontSize: '24px', color: '#ffffff'}}/>
                         <div>
                             <button
                                 onClick={() => NavigateToLogin()}
